@@ -302,7 +302,8 @@ class QRPlatba
 	public function getQRCodeImage($htmlTag = true, $size = 300, $margin = 10)
 	{
 		$qrCode = $this->getQRCodeInstance($size, $margin);
-		$data = $qrCode->writeDataUri();
+		$writer = new QrPngWriter();
+		$data = $writer->write($qrCode)->getDataUri();
 
 		return $htmlTag
 			? sprintf('<img src="%s" alt="QR Platba">', $data)
