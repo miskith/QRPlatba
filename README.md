@@ -86,9 +86,10 @@ echo $qrPlatba->getQRCodeInstance()->writeDataUri();
 
 ## Odkazy
 
-- Dokumentace - http://dfridrich.github.io/QRPlatba/
+- Dokumentace - https://www.davidmyska.com/qr-platba/
 - Oficiálí web QR Platby - http://qr-platba.cz/
-- Repozitář, který mě inspiroval - https://github.com/snoblucha/QRPlatba
+- Originální projekt - https://github.com/dfridrich/QRPlatba
+- Inspirace pro originálního developera - https://github.com/snoblucha/QRPlatba
 
 ## Contributing
 
