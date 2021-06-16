@@ -324,8 +324,7 @@ class QRPlatba
 	{
 		$qrCode = $this->getQRCodeInstance($size, $margin);
 
-		switch ($format)
-		{
+		switch ($format) {
 			case 'png':
 				$writer = new QrPngWriter();
 			break;
