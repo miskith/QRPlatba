@@ -70,6 +70,25 @@ class QRPlatbaTest extends TestCase
 		$this->assertInstanceOf('Endroid\\QrCode\\QrCode', $qrPlatba);
 	}
 
+	public function testQrCodeFileIsCreated()
+	{
+		$temp_name = tempnam(sys_get_temp_dir(), 'QrCode');
+
+		$this->assertTrue(is_file($temp_name), 'Could not create temp file.');
+		$this->assertEmpty(file_get_contents($temp_name), 'Temp file is not empty.');
+
+		(new QRPlatba())->setAccount('12-3456789012/0100')
+			->setVariableSymbol('2016001234')
+			->setMessage('Toto je testovací QR platba.')
+			->setSpecificSymbol('0308')
+			->setSpecificSymbol('1234')
+			->setCurrency('CZK')
+			->setDueDate(new \DateTime())
+			->saveQRCodeImage($temp_name, 'png', 100, 5);
+
+		$this->assertNotEmpty(file_get_contents($temp_name), 'QR code image for payment could not be created into the temp dir.');
+	}
+
 	public function testRecipientName()
 	{
 		$string = QRPlatba::create('12-3456789012/0100', '1234.56', '2016001234')

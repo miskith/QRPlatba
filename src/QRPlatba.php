@@ -11,7 +11,17 @@
 
 namespace Defr\QRPlatba;
 
+use Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelHigh as QrErrorCorrectionLevelHigh;
+use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeNone as QrRoundBlockSizeModeNone;
+use Endroid\QrCode\Writer\BinaryWriter as QrBinaryWriter;
+use Endroid\QrCode\Encoding\Encoding as QrEncoding;
+use Endroid\QrCode\Writer\PngWriter as QrPngWriter;
+use Endroid\QrCode\Writer\EpsWriter as QrEpsWriter;
+use Endroid\QrCode\Writer\PdfWriter as QrPdfWriter;
+use Endroid\QrCode\Writer\SvgWriter as QrSvgWriter;
+use Endroid\QrCode\Color\Color as QrColor;
 use Endroid\QrCode\QrCode;
+use Exception;
 
 /**
  * Knihovna pro generování QR plateb v PHP.
@@ -290,9 +300,9 @@ class QRPlatba
 	 *
 	 * @return string
 	 */
-	public function getQRCodeImage($htmlTag = true, $size = 300)
+	public function getQRCodeImage($htmlTag = true, $size = 300, $margin = 10)
 	{
-		$qrCode = $this->getQRCodeInstance($size);
+		$qrCode = $this->getQRCodeInstance($size, $margin);
 		$data = $qrCode->writeDataUri();
 
 		return $htmlTag
@@ -310,11 +320,33 @@ class QRPlatba
 	 * @return QRPlatba
 	 * @throws \Endroid\QrCode\Exception\UnsupportedExtensionException
 	 */
-	public function saveQRCodeImage($filename = null, $format = 'png', $size = 300)
+	public function saveQRCodeImage($filename = null, $format = 'png', $size = 300, $margin = 10)
 	{
-		$qrCode = $this->getQRCodeInstance($size);
-		$qrCode->setWriterByExtension($format);
-		$qrCode->writeFile($filename);
+		$qrCode = $this->getQRCodeInstance($size, $margin);
+
+		switch ($format)
+		{
+			case 'png':
+				$writer = new QrPngWriter();
+			break;
+			case 'svg':
+				$writer = new QrSvgWriter();
+			break;
+			case 'pdf':
+				$writer = new QrPdfWriter();
+			break;
+			case 'eps':
+				$writer = new QrEpsWriter();
+			break;
+			case 'bin':
+				$writer = new QrBinaryWriter();
+			break;
+			default:
+				throw new Exception('Unknown file format.');
+			break;
+		}
+
+		$writer->write($qrCode)->saveToFile($filename);
 
 		return $this;
 	}
@@ -326,15 +358,16 @@ class QRPlatba
 	 *
 	 * @return QrCode
 	 */
-	public function getQRCodeInstance($size = 300)
+	public function getQRCodeInstance($size = 300, $margin = 10)
 	{
-		$qrCode = new QrCode();
-		$qrCode->setText((string) $this);
-		$qrCode->setSize($size);
-		$qrCode->setForegroundColor(['r' => 0, 'g' => 0, 'b' => 0, 'a' => 0]);
-		$qrCode->setBackgroundColor(['r' => 255, 'g' => 255, 'b' => 255, 'a' => 0]);
-
-		return $qrCode;
+		return QrCode::create((string) $this)
+			->setSize($size - ($margin * 2))
+			->setEncoding(new QrEncoding('UTF-8'))
+			->setErrorCorrectionLevel(new QrErrorCorrectionLevelHigh())
+			->setMargin($margin)
+			->setRoundBlockSizeMode(new QrRoundBlockSizeModeNone())
+			->setForegroundColor(new QrColor(0, 0, 0, 0))
+			->setBackgroundColor(new QrColor(255, 255, 255, 0));
 	}
 
 	/**
