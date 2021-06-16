@@ -1,3 +1,4 @@
+/.phpdoc/cache/*
 composer.lock
 vendor/
 bin/
