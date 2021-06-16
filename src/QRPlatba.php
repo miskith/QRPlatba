@@ -12,7 +12,7 @@
 namespace Defr\QRPlatba;
 
 use Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelMedium as QrErrorCorrectionLevelMedium;
-use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeNone as QrRoundBlockSizeModeNone;
+use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeEnlarge as QrRoundBlockSizeModeEnlarge;
 use Endroid\QrCode\Writer\BinaryWriter as QrBinaryWriter;
 use Endroid\QrCode\Encoding\Encoding as QrEncoding;
 use Endroid\QrCode\Writer\PngWriter as QrPngWriter;
@@ -364,7 +364,7 @@ class QRPlatba
 			->setEncoding(new QrEncoding('UTF-8'))
 			->setErrorCorrectionLevel(new QrErrorCorrectionLevelMedium())
 			->setMargin($margin)
-			->setRoundBlockSizeMode(new QrRoundBlockSizeModeNone())
+			->setRoundBlockSizeMode(new QrRoundBlockSizeModeEnlarge())
 			->setForegroundColor(new QrColor(0, 0, 0, 0))
 			->setBackgroundColor(new QrColor(255, 255, 255, 0));
 	}
