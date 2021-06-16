@@ -70,6 +70,24 @@ class QRPlatbaTest extends TestCase
 		$this->assertInstanceOf('Endroid\\QrCode\\QrCode', $qrPlatba);
 	}
 
+	public function testQrCodeBase64Instante()
+	{
+		$qrPlatba = QRPlatba::create('12-3456789012/0100', 987.60)
+			->setMessage('QR platba musí fungovat i jako HTML!')
+			->getQRCodeImage(false);
+
+		$this->assertStringStartsWith('data:image/png;base64,', $qrPlatba);
+	}
+
+	public function testQrCodeHTMLImageInstante()
+	{
+		$qrPlatba = QRPlatba::create('12-3456789012/0100', 987.60)
+			->setMessage('QR platba musí fungovat i jako HTML!')
+			->getQRCodeImage();
+
+		$this->assertNotEmpty($qrPlatba);
+	}
+
 	public function testQrCodePngFileIsCreated()
 	{
 		$temp_name = tempnam(sys_get_temp_dir(), 'QrCode');
