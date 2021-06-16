@@ -37,6 +37,9 @@
 		],
 		"test": [
 			"./vendor/bin/phpunit"
+		],
+		"generate-docs": [
+			"php7.4 /usr/local/bin/phpDocumentor -d ./src -t docs"
 		]
 	}
 }
