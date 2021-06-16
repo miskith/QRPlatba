@@ -13,7 +13,7 @@ Tato knihovna umožňuje:
 - zobrazení obrázku v ```<img>``` tagu, který obsahuje v ```src``` rovnou data-uri s QR kódem, takže vygenerovaný
 obrázek tak není třeba ukládat na server (```$qrPlatba->getQRCodeImage()```)
 - uložení obrázku s QR kódem (```$qrPlatba->saveQRCodeImage()```)
-- získání data-uri (```$qrPlatba->getQRCodeInstance()->getDataUri()```)
+- získání data-uri (```$qrPlatba->getQRCodeImage(false)```)
 - získání instance objektu [QrCode](https://github.com/endroid/QrCode) (```$qrPlatba->getQRCodeInstance()```)
 
 QRPlatbu v současné době podporují tyto banky:
@@ -80,7 +80,7 @@ Pro další je potřeba dopsat vlastní Writter
 Zobrazení data-uri
 ```php
 // data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAFAAQMAAAD3XjfpAAAA...
-echo $qrPlatba->getQRCodeInstance()->writeDataUri();
+echo $qrPlatba->getQRCodeImage(false);
 ```
 
 ## Odkazy
