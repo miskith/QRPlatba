@@ -31,15 +31,12 @@
 	"require-dev": {
 		"phpunit/phpunit": "^9.5.5"
 	},
-	"config": {
-		"bin-dir": "bin"
-	},
 	"scripts": {
 		"psr-fix": [
 			"php-cs-fixer fix"
 		],
 		"test": [
-			"./bin/phpunit"
+			"./vendor/bin/phpunit"
 		]
 	}
 }
