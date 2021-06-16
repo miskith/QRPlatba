@@ -9,12 +9,13 @@
  * please view LICENSE.
  */
 
+use PHPUnit\Framework\TestCase;
 use Defr\QRPlatba\QRPlatba;
 
 /**
  * Class QRPlatbaTest.
  */
-class IBANTest extends PHPUnit_Framework_TestCase
+class IBANTest extends TestCase
 {
 
     public function testAccountHigherThanMaxInt()
