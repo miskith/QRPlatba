@@ -2,8 +2,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/miskith/qr-platba/v/stable)](https://packagist.org/packages/miskith/qr-platba)
 [![Total Downloads](https://poser.pugx.org/miskith/qr-platba/downloads)](https://packagist.org/packages/miskith/qr-platba)
-[![Build Status](https://travis-ci.org/miskith/QRPlatba.svg)](https://travis-ci.org/miskith/QRPlatba)
-[![Coverage Status](https://coveralls.io/repos/github/miskith/QRPlatba/badge.svg?branch=master)](https://coveralls.io/github/miskith/QRPlatba?branch=master)
+[![Build Status](https://travis-ci.com/miskith/QRPlatba.svg)](https://travis-ci.com/miskith/QRPlatba)
 
 Knihovna pro generování QR plateb v PHP. QR platba zjednodušuje koncovému uživateli
 provedení příkazu k úhradě, protože obsahuje veškeré potřebné údaje, které stačí jen
