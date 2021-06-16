@@ -1,5 +1,5 @@
 {
-	"name": "zoldia/qr-platba",
+	"name": "miskith/qr-platba",
 	"type": "library",
 	"description": "Generování QR plateb v PHP.",
 	"keywords": [
@@ -7,12 +7,16 @@
 		"qr",
 		"platba"
 	],
-	"homepage": "https://github.com/zoldia/QRPlatba",
+	"homepage": "https://github.com/miskith/QRPlatba",
 	"license": "MIT",
 	"authors": [
 		{
 			"name": "Dennis Fridrich",
 			"email": "fridrich.dennis@gmail.com"
+		},
+		{
+			"name": "David Myška",
+			"email": "david.myska@madstud.io"
 		}
 	],
 	"require": {
