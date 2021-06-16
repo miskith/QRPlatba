@@ -1,9 +1,9 @@
 # QR Platba
 
-[![Latest Stable Version](https://poser.pugx.org/dfridrich/qr-platba/v/stable)](https://packagist.org/packages/dfridrich/qr-platba)
-[![Total Downloads](https://poser.pugx.org/dfridrich/qr-platba/downloads)](https://packagist.org/packages/dfridrich/qr-platba)
-[![Build Status](https://travis-ci.org/dfridrich/QRPlatba.svg)](https://travis-ci.org/dfridrich/QRPlatba)
-[![Coverage Status](https://coveralls.io/repos/github/dfridrich/QRPlatba/badge.svg?branch=master)](https://coveralls.io/github/dfridrich/QRPlatba?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/miskith/qr-platba/v/stable)](https://packagist.org/packages/miskith/qr-platba)
+[![Total Downloads](https://poser.pugx.org/miskith/qr-platba/downloads)](https://packagist.org/packages/miskith/qr-platba)
+[![Build Status](https://travis-ci.org/miskith/QRPlatba.svg)](https://travis-ci.org/miskith/QRPlatba)
+[![Coverage Status](https://coveralls.io/repos/github/miskith/QRPlatba/badge.svg?branch=master)](https://coveralls.io/github/miskith/QRPlatba?branch=master)
 
 Knihovna pro generování QR plateb v PHP. QR platba zjednodušuje koncovému uživateli
 provedení příkazu k úhradě, protože obsahuje veškeré potřebné údaje, které stačí jen
@@ -25,7 +25,7 @@ Podporuje PHP ^7.3||^8.0.
 
 ## Instalace pomocí Composeru
 
-`composer require dfridrich/qr-platba`
+`composer require miskith/qr-platba`
 
 ## Příklad
 
