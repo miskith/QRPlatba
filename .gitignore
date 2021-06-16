@@ -3,3 +3,4 @@ vendor/
 bin/
 phpunit.xml.bak
 .phpunit.result.cache
+.php-cs-fixer.cache

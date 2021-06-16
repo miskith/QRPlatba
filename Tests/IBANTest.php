@@ -17,15 +17,13 @@ use Defr\QRPlatba\QRPlatba;
  */
 class IBANTest extends TestCase
 {
+	public function testAccountHigherThanMaxInt()
+	{
+		$string = QRPlatba::accountToIban('2501301193/2010');
 
-    public function testAccountHigherThanMaxInt()
-    {
-        $string = QRPlatba::accountToIban('2501301193/2010');
-
-        $this->assertSame(
-            'CZ3620100000002501301193',
-            $string
-        );
-    }
-
+		$this->assertSame(
+			'CZ3620100000002501301193',
+			$string
+		);
+	}
 }
