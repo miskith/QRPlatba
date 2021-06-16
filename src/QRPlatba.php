@@ -21,7 +21,6 @@ use Endroid\QrCode\Writer\PdfWriter as QrPdfWriter;
 use Endroid\QrCode\Writer\SvgWriter as QrSvgWriter;
 use Endroid\QrCode\Color\Color as QrColor;
 use Endroid\QrCode\QrCode;
-use Exception;
 
 /**
  * Knihovna pro generování QR plateb v PHP.
@@ -341,7 +340,7 @@ class QRPlatba
 				$writer = new QrBinaryWriter();
 			break;
 			default:
-				throw new Exception('Unknown file format.');
+				throw new QRPlatbaException('Unknown file format');
 			break;
 		}
 
