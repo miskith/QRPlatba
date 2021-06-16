@@ -306,7 +306,7 @@ class QRPlatba
 		$data = $writer->write($qrCode)->getDataUri();
 
 		return $htmlTag
-			? sprintf('<img src="%s" alt="QR Platba">', $data)
+			? sprintf('<img src="%s" width="%2$d" height="%2$d" alt="QR Platba" />', $data, $size)
 			: $data;
 	}
 
