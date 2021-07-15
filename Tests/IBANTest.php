@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the library "QRPlatba".
+ * This file is part of the library "QRInvoice".
  *
  * (c) Dennis Fridrich <fridrich.dennis@gmail.com>
  *
@@ -10,16 +10,16 @@
  */
 
 use PHPUnit\Framework\TestCase;
-use Defr\QRPlatba\QRPlatba;
+use Miskith\QRInvoice\QRInvoice;
 
 /**
- * Class QRPlatbaTest.
+ * Class QRInvoiceTest.
  */
 class IBANTest extends TestCase
 {
 	public function testAccountHigherThanMaxInt()
 	{
-		$string = QRPlatba::accountToIban('2501301193/2010');
+		$string = QRInvoice::accountToIban('2501301193/2010');
 
 		$this->assertSame(
 			'CZ3620100000002501301193',

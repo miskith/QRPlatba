@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the library "QRPlatba".
+ * This file is part of the library "QRInvoice".
  *
  * (c) Dennis Fridrich <fridrich.dennis@gmail.com>
  *
@@ -9,11 +9,11 @@
  * please view LICENSE.
  */
 
-namespace Defr\QRPlatba;
+namespace Miskith\QRInvoice;
 
 /**
- * Class QRPlatbaException.
+ * Class QRInvoiceException.
  */
-class QRPlatbaException extends \Exception
+class QRInvoiceException extends \Exception
 {
 }

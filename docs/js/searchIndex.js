@@ -1,129 +1,129 @@
 Search.appendIndex(
     [
                 {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba",
-            "name": "QRPlatba",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice",
+            "name": "QRInvoice",
             "summary": "Knihovna\u0020pro\u0020generov\u00E1n\u00ED\u0020QR\u0020plateb\u0020v\u0020PHP.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "Kontruktor\u0020nov\u00E9\u0020platby.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method___construct"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method___construct"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003Acreate\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003Acreate\u0028\u0029",
             "name": "create",
             "summary": "Statick\u00FD\u0020konstruktor\u0020nov\u00E9\u0020platby.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_create"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_create"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AsetAccount\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetAccount\u0028\u0029",
             "name": "setAccount",
             "summary": "Nastaven\u00ED\u0020\u010D\u00EDsla\u0020\u00FA\u010Dtu\u0020ve\u0020form\u00E1tu\u002012\u002D3456789012\/0100.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_setAccount"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setAccount"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AsetAmount\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetAmount\u0028\u0029",
             "name": "setAmount",
             "summary": "Nastaven\u00ED\u0020\u010D\u00E1stky.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_setAmount"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setAmount"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AsetVariableSymbol\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetVariableSymbol\u0028\u0029",
             "name": "setVariableSymbol",
             "summary": "Nastaven\u00ED\u0020variabiln\u00EDho\u0020symbolu.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_setVariableSymbol"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setVariableSymbol"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AsetConstantSymbol\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetConstantSymbol\u0028\u0029",
             "name": "setConstantSymbol",
             "summary": "Nastaven\u00ED\u0020konstatn\u00EDho\u0020symbolu.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_setConstantSymbol"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setConstantSymbol"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AsetSpecificSymbol\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetSpecificSymbol\u0028\u0029",
             "name": "setSpecificSymbol",
             "summary": "Nastaven\u00ED\u0020specifick\u00E9ho\u0020symbolu.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_setSpecificSymbol"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setSpecificSymbol"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AsetMessage\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetMessage\u0028\u0029",
             "name": "setMessage",
             "summary": "Nastaven\u00ED\u0020zpr\u00E1vy\u0020pro\u0020p\u0159\u00EDjemce.\u0020Z\u0020\u0159et\u011Bzce\u0020bude\u0020odstran\u011Bna\u0020diaktirika.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_setMessage"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setMessage"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AsetRecipientName\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetRecipientName\u0028\u0029",
             "name": "setRecipientName",
             "summary": "Nastaven\u00ED\u0020jm\u00E9na\u0020p\u0159\u00EDjemce.\u0020Z\u0020\u0159et\u011Bzce\u0020bude\u0020odstran\u011Bna\u0020diaktirika.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_setRecipientName"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setRecipientName"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AsetDueDate\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetDueDate\u0028\u0029",
             "name": "setDueDate",
             "summary": "Nastaven\u00ED\u0020data\u0020\u00FAhrady.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_setDueDate"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setDueDate"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AsetCurrency\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetCurrency\u0028\u0029",
             "name": "setCurrency",
             "summary": "",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_setCurrency"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setCurrency"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003A__toString\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
             "summary": "Metoda\u0020vr\u00E1t\u00ED\u0020QR\u0020Platbu\u0020jako\u0020textov\u00FD\u0020\u0159et\u011Bzec.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method___toString"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method___toString"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AgetQRCodeImage\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AgetQRCodeImage\u0028\u0029",
             "name": "getQRCodeImage",
             "summary": "Metoda\u0020vr\u00E1t\u00ED\u0020QR\u0020k\u00F3d\u0020jako\u0020HTML\u0020tag,\u0020p\u0159\u00EDpadn\u011B\u0020jako\u0020data\u002Duri.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_getQRCodeImage"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_getQRCodeImage"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AsaveQRCodeImage\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsaveQRCodeImage\u0028\u0029",
             "name": "saveQRCodeImage",
             "summary": "Ulo\u017Een\u00ED\u0020QR\u0020k\u00F3du\u0020do\u0020souboru.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_saveQRCodeImage"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_saveQRCodeImage"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AgetQRCodeInstance\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AgetQRCodeInstance\u0028\u0029",
             "name": "getQRCodeInstance",
             "summary": "Instance\u0020t\u0159\u00EDdy\u0020QrCode\u0020pro\u0020libovoln\u00E9\u0020\u00FApravy\u0020\u0028barevnost,\u0020atd.\u0029.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_getQRCodeInstance"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_getQRCodeInstance"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AaccountToIban\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AaccountToIban\u0028\u0029",
             "name": "accountToIban",
             "summary": "P\u0159eveden\u00ED\u0020\u010D\u00EDsla\u0020\u00FA\u010Dtu\u0020na\u0020form\u00E1t\u0020IBAN.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_accountToIban"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_accountToIban"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AstripDiacritics\u0028\u0029",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AstripDiacritics\u0028\u0029",
             "name": "stripDiacritics",
             "summary": "Odstran\u011Bn\u00ED\u0020diaktitiky.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#method_stripDiacritics"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_stripDiacritics"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003AVERSION",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AVERSION",
             "name": "VERSION",
             "summary": "Verze\u0020QR\u0020form\u00E1tu\u0020QR\u0020Platby.",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#constant_VERSION"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#constant_VERSION"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003A\u0024currencies",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003A\u0024currencies",
             "name": "currencies",
             "summary": "",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#property_currencies"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#property_currencies"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatba\u003A\u003A\u0024keys",
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003A\u0024keys",
             "name": "keys",
             "summary": "",
-            "url": "classes/Defr-QRPlatba-QRPlatba.html#property_keys"
+            "url": "classes/Miskith-QRInvoice-QRInvoice.html#property_keys"
         },                {
-            "fqsen": "\\Defr\\QRPlatba\\QRPlatbaException",
-            "name": "QRPlatbaException",
-            "summary": "Class\u0020QRPlatbaException.",
-            "url": "classes/Defr-QRPlatba-QRPlatbaException.html"
+            "fqsen": "\\Miskith\\QRInvoice\\QRInvoiceException",
+            "name": "QRInvoiceException",
+            "summary": "Class\u0020QRInvoiceException.",
+            "url": "classes/Miskith-QRInvoice-QRInvoiceException.html"
         },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
             "url": "namespaces/default.html"
         },                {
-            "fqsen": "\\Defr\\QRPlatba",
-            "name": "QRPlatba",
+            "fqsen": "\\Miskith\\QRInvoice",
+            "name": "QRInvoice",
             "summary": "",
-            "url": "namespaces/defr-qrplatba.html"
+            "url": "namespaces/miskith-qrinvoice.html"
         },                {
-            "fqsen": "\\Defr",
-            "name": "Defr",
+            "fqsen": "\\Miskith",
+            "name": "Miskith",
             "summary": "",
-            "url": "namespaces/defr.html"
+            "url": "namespaces/miskith.html"
         }            ]
 );

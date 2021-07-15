@@ -6,7 +6,7 @@
     </include>
   </coverage>
   <testsuites>
-    <testsuite name="miskith/QRPlatba test suite">
+    <testsuite name="miskith/QRInvoice test suite">
       <directory suffix="Test.php">./Tests</directory>
     </testsuite>
   </testsuites>

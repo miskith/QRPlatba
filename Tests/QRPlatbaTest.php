@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the library "QRPlatba".
+ * This file is part of the library "QRInvoice".
  *
  * (c) Dennis Fridrich <fridrich.dennis@gmail.com>
  *
@@ -10,12 +10,12 @@
  */
 
 use PHPUnit\Framework\TestCase;
-use Defr\QRPlatba\QRPlatba;
+use Miskith\QRInvoice\QRInvoice;
 
 /**
- * Class QRPlatbaTest.
+ * Class QRInvoiceTest.
  */
-class QRPlatbaTest extends TestCase
+class QRInvoiceTest extends TestCase
 {
 	/**
 	 * @expectedException \InvalidArgumentException
@@ -24,14 +24,14 @@ class QRPlatbaTest extends TestCase
 	{
 		$this->expectException(InvalidArgumentException::class);
 
-		QRPlatba::create('12-3456789012/0100', '1234.56', '2016001234')
+		QRInvoice::create('12-3456789012/0100', '1234.56', '2016001234')
 			->setMessage('Düakrítičs')
 			->setCurrency('FAKE');
 	}
 
 	public function testCzkString()
 	{
-		$string = QRPlatba::create('12-3456789012/0100', '1234.56', '2016001234')
+		$string = QRInvoice::create('12-3456789012/0100', '1234.56', '2016001234')
 			->setMessage('Düakrítičs');
 
 		$this->assertSame(
@@ -39,7 +39,7 @@ class QRPlatbaTest extends TestCase
 			$string->__toString()
 		);
 
-		$string = QRPlatba::create('12-3456789012/0100', '1234.56', '2016001234')
+		$string = QRInvoice::create('12-3456789012/0100', '1234.56', '2016001234')
 			->setMessage('Düakrítičs')
 			->setCurrency('CZK');
 
@@ -51,7 +51,7 @@ class QRPlatbaTest extends TestCase
 
 	public function testEurString()
 	{
-		$string = QRPlatba::create('12-3456789012/0100', '1234.56', '2016001234')
+		$string = QRInvoice::create('12-3456789012/0100', '1234.56', '2016001234')
 			->setMessage('Düakrítičs')
 			->setCurrency('EUR');
 
@@ -63,29 +63,29 @@ class QRPlatbaTest extends TestCase
 
 	public function testQrCodeInstante()
 	{
-		$qrPlatba = QRPlatba::create('12-3456789012/0100', 987.60)
+		$qrInvoice = QRInvoice::create('12-3456789012/0100', 987.60)
 			->setMessage('QR platba je parádní!')
 			->getQRCodeInstance();
 
-		$this->assertInstanceOf('Endroid\\QrCode\\QrCode', $qrPlatba);
+		$this->assertInstanceOf('Endroid\\QrCode\\QrCode', $qrInvoice);
 	}
 
 	public function testQrCodeBase64Instante()
 	{
-		$qrPlatba = QRPlatba::create('12-3456789012/0100', 987.60)
+		$qrInvoice = QRInvoice::create('12-3456789012/0100', 987.60)
 			->setMessage('QR platba musí fungovat i jako HTML!')
 			->getQRCodeImage(false);
 
-		$this->assertStringStartsWith('data:image/png;base64,', $qrPlatba);
+		$this->assertStringStartsWith('data:image/png;base64,', $qrInvoice);
 	}
 
 	public function testQrCodeHTMLImageInstante()
 	{
-		$qrPlatba = QRPlatba::create('12-3456789012/0100', 987.60)
+		$qrInvoice = QRInvoice::create('12-3456789012/0100', 987.60)
 			->setMessage('QR platba musí fungovat i jako HTML!')
 			->getQRCodeImage();
 
-		$this->assertNotEmpty($qrPlatba);
+		$this->assertNotEmpty($qrInvoice);
 	}
 
 	public function testQrCodePngFileIsCreated()
@@ -95,7 +95,7 @@ class QRPlatbaTest extends TestCase
 		$this->assertTrue(is_file($temp_name), 'Could not create temp file.');
 		$this->assertEmpty(file_get_contents($temp_name), 'Temp file is not empty.');
 
-		(new QRPlatba())->setAccount('12-3456789012/0100')
+		(new QRInvoice())->setAccount('12-3456789012/0100')
 			->setVariableSymbol('2016001234')
 			->setMessage('Toto je testovací QR platba.')
 			->setSpecificSymbol('0308')
@@ -114,7 +114,7 @@ class QRPlatbaTest extends TestCase
 		$this->assertTrue(is_file($temp_name), 'Could not create temp file.');
 		$this->assertEmpty(file_get_contents($temp_name), 'Temp file is not empty.');
 
-		(new QRPlatba())->setAccount('12-3456789012/0100')
+		(new QRInvoice())->setAccount('12-3456789012/0100')
 			->setVariableSymbol('2016001234')
 			->setMessage('Toto je testovací QR platba.')
 			->setSpecificSymbol('0308')
@@ -128,7 +128,7 @@ class QRPlatbaTest extends TestCase
 
 	public function testRecipientName()
 	{
-		$string = QRPlatba::create('12-3456789012/0100', '1234.56', '2016001234')
+		$string = QRInvoice::create('12-3456789012/0100', '1234.56', '2016001234')
 			->setRecipientName('Düakrítičs');
 
 		$this->assertSame(

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the library "QRPlatba".
+ * This file is part of the library "QRInvoice".
  *
  * (c) Dennis Fridrich <fridrich.dennis@gmail.com>
  *
@@ -9,7 +9,7 @@
  * please view LICENSE.
  */
 
-namespace Defr\QRPlatba;
+namespace Miskith\QRInvoice;
 
 use Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelMedium as QrErrorCorrectionLevelMedium;
 use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeEnlarge as QrRoundBlockSizeModeEnlarge;
@@ -27,7 +27,7 @@ use Endroid\QrCode\QrCode;
  *
  * @see https://raw.githubusercontent.com/snoblucha/QRPlatba/master/QRPlatba.php
  */
-class QRPlatba
+class QRInvoice
 {
 	/**
 	 * Verze QR formátu QR Platby.
@@ -131,7 +131,7 @@ class QRPlatba
 	 * @param null $amount
 	 * @param null $variable
 	 *
-	 * @return QRPlatba
+	 * @return QRInvoice
 	 * @throws \InvalidArgumentException
 	 */
 	public static function create($account = null, $amount = null, $variable = null)
@@ -200,14 +200,14 @@ class QRPlatba
 	 *
 	 * @param $ss
 	 *
-	 * @throws QRPlatbaException
+	 * @throws QRInvoiceException
 	 *
 	 * @return $this
 	 */
 	public function setSpecificSymbol($ss)
 	{
 		if (mb_strlen($ss) > 10) {
-			throw new QRPlatbaException('Specific symbol is higher than 10 chars');
+			throw new QRInvoiceException('Specific symbol is higher than 10 chars');
 		}
 		$this->keys['X-SS'] = $ss;
 
@@ -317,7 +317,7 @@ class QRPlatba
 	 * @param null|string $format Format of the file (png, jpeg, jpg, gif, wbmp)
 	 * @param int $size
 	 *
-	 * @return QRPlatba
+	 * @return QRInvoice
 	 * @throws \Endroid\QrCode\Exception\UnsupportedExtensionException
 	 */
 	public function saveQRCodeImage($filename = null, $format = 'png', $size = 300, $margin = 10)
@@ -341,7 +341,7 @@ class QRPlatba
 				$writer = new QrBinaryWriter();
 			break;
 			default:
-				throw new QRPlatbaException('Unknown file format');
+				throw new QRInvoiceException('Unknown file format');
 			break;
 		}
 
