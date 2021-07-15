@@ -230,6 +230,20 @@ class QRInvoice
 	}
 
 	/**
+	 * Nastavení IBAN (+SWIFT/BIC) čísla účtu
+	 *
+	 * @param $iban
+	 *
+	 * @return $this
+	 */
+	public function setIban($iban)
+	{
+		$this->spd_keys['ACC'] = $this->sid_keys['ACC'] = $iban;
+
+		return $this;
+	}
+
+	/**
 	 * Nastavení částky.
 	 *
 	 * @param $amount
@@ -633,6 +647,25 @@ class QRInvoice
 	public function setCurrencyRate(float $currencyRate)
 	{
 		$this->sid_keys['FX'] = sprintf('%.3f', $currencyRate);
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení označení účetního software, ve kterém byl řetězec QR Faktury (faktura) vytvořen
+	 *
+	 * @param string $taxSoftware
+	 *
+	 * @return $this
+	 * @throws \InvalidArgumentException
+	 */
+	public function setTaxSoftware(string $taxSoftware)
+	{
+		if (mb_strlen($taxSoftware) > 30) {
+			throw new QRInvoiceException('Tax software name is longer than 30 characters');
+		}
+
+		$this->sid_keys['X-SW'] = $taxSoftware;
 
 		return $this;
 	}
