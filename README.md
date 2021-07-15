@@ -47,7 +47,7 @@ $qrInvoice = (new QRInvoice)
 echo $qrInvoice->getQRCodeImage(); // Zobrazí <img> tag s kódem, viz níže
 ```
 
-![Ukázka](readme/qrpayment.png =200x)
+![Ukázka](readme/qrpayment.png)
 
 Lze použít i jednodušší zápis:
 
@@ -80,7 +80,7 @@ $qrInvoice = QRInvoice::create('27-16060243/0300', 495.00, '012150672')
 echo $qrInvoice->getQRCodeImage(); // Zobrazí <img> tag s kódem, viz níže
 ```
 
-![Ukázka](readme/qrinvoice.png =200x)
+![Ukázka](readme/qrinvoice.png)
 
 ## Příklad QR faktury (pouze faktura bez platby)
 
@@ -117,7 +117,7 @@ $qrInvoice = (new QRInvoice)
 echo $qrInvoice->getQRCodeImage(); // Zobrazí <img> tag s kódem, viz níže
 ```
 
-![Ukázka](readme/qrinvoice2.png =200x)
+![Ukázka](readme/qrinvoice2.png)
 
 ### Další možnosti
 
