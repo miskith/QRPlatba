@@ -100,7 +100,7 @@ class QRInvoice
 	];
 
 	/**
-	 * Kontruktor nové platby.
+	 * Konstruktor nové platby.
 	 *
 	 * @param null $account
 	 * @param null $amount
