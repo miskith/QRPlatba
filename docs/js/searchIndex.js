@@ -21,6 +21,11 @@ Search.appendIndex(
             "summary": "Nastaven\u00ED\u0020\u010D\u00EDsla\u0020\u00FA\u010Dtu\u0020ve\u0020form\u00E1tu\u002012\u002D3456789012\/0100.",
             "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setAccount"
         },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetIban\u0028\u0029",
+            "name": "setIban",
+            "summary": "Nastaven\u00ED\u0020IBAN\u0020\u0028\u002BSWIFT\/BIC\u0029\u0020\u010D\u00EDsla\u0020\u00FA\u010Dtu",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setIban"
+        },                {
             "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetAmount\u0028\u0029",
             "name": "setAmount",
             "summary": "Nastaven\u00ED\u0020\u010D\u00E1stky.",
@@ -145,6 +150,11 @@ Search.appendIndex(
             "name": "setCurrencyRate",
             "summary": "Nastaven\u00ED\u0020sm\u011Bnn\u00E9ho\u0020kurzu\u0020mezi\u0020CZK\u0020a\u0020m\u011Bnou\u0020celkov\u00E9\u0020\u010D\u00E1stky",
             "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setCurrencyRate"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetTaxSoftware\u0028\u0029",
+            "name": "setTaxSoftware",
+            "summary": "Nastaven\u00ED\u0020ozna\u010Den\u00ED\u0020\u00FA\u010Detn\u00EDho\u0020software,\u0020ve\u0020kter\u00E9m\u0020byl\u0020\u0159et\u011Bzec\u0020QR\u0020Faktury\u0020\u0028faktura\u0029\u0020vytvo\u0159en",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setTaxSoftware"
         },                {
             "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
