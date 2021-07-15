@@ -66,7 +66,7 @@ class QRInvoice
 		'ALT-ACC' => null,
 		// Max. 93 - znaků Seznam alternativnich uctu. odddeleny carkou,
 		'AM' => null,
-		//Max. 10 znaků - Desetinné číslo Výše částky platby.
+		// Max. 10 znaků - Desetinné číslo Výše částky platby.
 		'CC' => 'CZK',
 		// Právě 3 znaky - Měna platby.
 		'DT' => null,
@@ -90,13 +90,13 @@ class QRInvoice
 		'NT' => null,
 		// Právě 1 znak P|E - Identifikace kanálu pro zaslání notifikace výstavci platby.
 		'NTA' => null,
-		//Max. 320 znaků - Telefonní číslo v mezinárodním nebo lokálním vyjádření nebo E-mailová adresa
+		// Max. 320 znaků - Telefonní číslo v mezinárodním nebo lokálním vyjádření nebo E-mailová adresa
 		'X-PER' => null,
-		// Max. 2 znaky -  Celé číslo - Počet dní, po které se má provádět pokus o opětovné provedení neúspěšné platby
+		// Max. 2 znaky - Celé číslo - Počet dní, po které se má provádět pokus o opětovné provedení neúspěšné platby
 		'X-ID' => null,
-		// Max. 20 znaků. -  Identifikátor platby na straně příkazce. Jedná se o interní ID, jehož použití a interpretace závisí na bance příkazce.
+		// Max. 20 znaků. - Identifikátor platby na straně příkazce. Jedná se o interní ID, jehož použití a interpretace závisí na bance příkazce.
 		'X-URL' => null,
-		// Max. 140 znaků. -  URL, které je možno využít pro vlastní potřebu
+		// Max. 140 znaků. - URL, které je možno využít pro vlastní potřebu
 	];
 
 	/**
@@ -184,13 +184,13 @@ class QRInvoice
 	/**
 	 * Nastavení konstatního symbolu.
 	 *
-	 * @param $cs
+	 * @param $ks
 	 *
 	 * @return $this
 	 */
-	public function setConstantSymbol($cs)
+	public function setConstantSymbol($ks)
 	{
-		$this->keys['X-CS'] = $cs;
+		$this->keys['X-KS'] = $ks;
 
 		return $this;
 	}
