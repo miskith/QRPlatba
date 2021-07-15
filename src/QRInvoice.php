@@ -278,7 +278,7 @@ class QRInvoice
 	public function setSpecificSymbol($ss)
 	{
 		if (mb_strlen($ss) > 10) {
-			throw new QRInvoiceException('Specific symbol is higher than 10 chars');
+			throw new QRInvoiceException('Specific symbol is longer than 10 characters');
 		}
 		$this->spd_keys['X-SS'] = $ss;
 
