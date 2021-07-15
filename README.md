@@ -124,15 +124,16 @@ echo $qrInvoice->getQRCodeImage(); // Zobrazí <img> tag s kódem, viz níže
 Uložení do souboru
 ```php
 // Uloží png o velikosti 100x100 px
-$qrInvoice->saveQRCodeImage("qrcode.png", "png", 100);
+$qrInvoice->saveQRCodeImage('qrcode.png', 'png', 100);
 
 // Uloží svg o velikosti 100x100 px s 10 px marginem
-$qrInvoice->saveQRCodeImage("qrcode.svg", "svg", 100, 10);
+$qrInvoice->saveQRCodeImage('qrcode.svg', 'svg', 100, 10);
 ```
 
 Aktuální možné formáty jsou:
 * Png
 * Svg
+* Pdf
 * Eps
 * binární
 
