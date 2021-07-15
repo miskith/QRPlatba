@@ -171,6 +171,11 @@ class QRInvoice
 	];
 
 	/**
+	 * Přepínač, zda se má generovat pouze QR Faktura
+	 */
+	private $isOnlyInvoice = false;
+
+	/**
 	 * Konstruktor nové platby.
 	 *
 	 * @param null $account
@@ -345,14 +350,28 @@ class QRInvoice
 	}
 
 	/**
+	 * Přepínač, zda se má generovat pouze QR Faktura
+	 *
+	 * @param bool $isOnlyInvoice
+	 *
+	 * @return $this
+	 */
+	public function setIsOnlyInvoice(bool $isOnlyInvoice)
+	{
+		$this->isOnlyInvoice = $isOnlyInvoice;
+
+		return $this;
+	}
+
+	/**
 	 * Nastavení ID faktury
 	 *
-	 * @param $id
+	 * @param string $id
 	 *
 	 * @return $this
 	 * @throws \InvalidArgumentException
 	 */
-	public function setInvoiceId($id)
+	public function setInvoiceId(string $id)
 	{
 		if (mb_strlen($id) > 40) {
 			throw new QRInvoiceException('Invoice id is longer than 40 characters');
@@ -378,6 +397,247 @@ class QRInvoice
 	}
 
 	/**
+	 * Nastavení typu daňového plnění
+	 *
+	 * @param int $tp
+	 *
+	 * @return $this
+	 */
+	public function setTaxPerformance(int $tp)
+	{
+		if ($tp!==0 && $tp!==1 && $tp!==2) {
+			throw new QRInvoiceException('Unknown tax performance ID');
+		}
+
+		$this->sid_keys['TP'] = $tp;
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení identifikace typu dokladu
+	 *
+	 * @param int $td
+	 *
+	 * @return $this
+	 */
+	public function setInvoiceDocumentType(int $td)
+	{
+		if (($td<0 || $td>5) && $td!==9) {
+			throw new QRInvoiceException('Unknown invoice document type ID');
+		}
+
+		$this->sid_keys['TD'] = $td;
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení příznaku, který rozlišuje, zda faktura obsahuje zúčtování záloh
+	 *
+	 * @param bool $sa
+	 *
+	 * @return $this
+	 */
+	public function setInvoiceIncludingDeposit(bool $sa)
+	{
+		$this->sid_keys['SA'] = (int)$sa;
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení čísla (označení) objednávky, k níž se vztahuje tento účetní doklad
+	 *
+	 * @param string $on
+	 *
+	 * @return $this
+	 * @throws \InvalidArgumentException
+	 */
+	public function setInvoiceRelatedId(string $on)
+	{
+		if (mb_strlen($on) > 20) {
+			throw new QRInvoiceException('Invoice related id is longer than 20 characters');
+		}
+
+		$this->sid_keys['ON'] = $on;
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení DIČ výstavce
+	 *
+	 * @param string $vii
+	 *
+	 * @return $this
+	 * @throws \InvalidArgumentException
+	 */
+	public function setCompanyTaxId(string $vii)
+	{
+		if (mb_strlen($vii) > 14) {
+			throw new QRInvoiceException('Tax identification number of invoicing subject is longer than 14 characters');
+		}
+
+		$this->sid_keys['VII'] = $vii;
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení IČO výstavce
+	 *
+	 * @param string $ini
+	 *
+	 * @return $this
+	 * @throws \InvalidArgumentException
+	 */
+	public function setCompanyRegistrationId(string $ini)
+	{
+		if (mb_strlen($ini) > 8) {
+			throw new QRInvoiceException('Company registration number of invoicing subject is longer than 8 characters');
+		}
+
+		$this->sid_keys['INI'] = $ini;
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení DIČ příjemce
+	 *
+	 * @param string $vir
+	 *
+	 * @return $this
+	 * @throws \InvalidArgumentException
+	 */
+	public function setInvoiceSubjectTaxId(string $vir)
+	{
+		if (mb_strlen($vir) > 14) {
+			throw new QRInvoiceException('Tax identification number of invoiced subject is longer than 14 characters');
+		}
+
+		$this->sid_keys['VIR'] = $vir;
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení IČO příjemce
+	 *
+	 * @param string $inr
+	 *
+	 * @return $this
+	 * @throws \InvalidArgumentException
+	 */
+	public function setInvoiceSubjectRegistrationId(string $inr)
+	{
+		if (mb_strlen($inr) > 8) {
+			throw new QRInvoiceException('Company registration number of invoiced subject is longer than 8 characters');
+		}
+
+		$this->sid_keys['INR'] = $inr;
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení data uskutečnění zdanitelného plnění
+	 *
+	 * @param string $date
+	 *
+	 * @return $this
+	 */
+	public function setTaxDate(\DateTime $date)
+	{
+		$this->sid_keys['DUZP'] = $date->format('Ymd');
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení data povinnosti přiznat daň
+	 *
+	 * @param string $date
+	 *
+	 * @return $this
+	 */
+	public function setTaxReportDate(\DateTime $date)
+	{
+		$this->sid_keys['DPPD'] = $date->format('Ymd');
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení částky základu daně v CZK včetně haléřového vyrovnání
+	 *
+	 * @param float $amount
+	 * @param int $taxLevelId
+	 *
+	 * @return $this
+	 * @throws \InvalidArgumentException
+	 */
+	public function setTaxBase(float $amount, int $taxLevelId)
+	{
+		if ($taxLevelId<0 || $taxLevelId>2) {
+			throw new QRInvoiceException('Unknown tax level ID');
+		}
+
+		$this->sid_keys['TB'.$taxLevelId] = sprintf('%.2f', $amount);
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení částky daně v CZK včetně haléřového vyrovnání
+	 *
+	 * @param float $amount
+	 * @param int $taxLevelId
+	 *
+	 * @return $this
+	 * @throws \InvalidArgumentException
+	 */
+	public function setTaxAmount(float $amount, int $taxLevelId)
+	{
+		if ($taxLevelId<0 || $taxLevelId>2) {
+			throw new QRInvoiceException('Unknown tax level ID');
+		}
+
+		$this->sid_keys['T'.$taxLevelId] = sprintf('%.2f', $amount);
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení částky osvobozených plnění, plnění mimo předmět DPH, plnění neplátců DPH v CZK včetně haléřového vyrovnání
+	 *
+	 * @param float $amount
+	 *
+	 * @return $this
+	 */
+	public function setNoTaxAmount(float $amount)
+	{
+		$this->sid_keys['NTB'] = sprintf('%.2f', $amount);
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení směnného kurzu mezi CZK a měnou celkové částky
+	 *
+	 * @param float $currencyRate
+	 *
+	 * @return $this
+	 */
+	public function setCurrencyRate(float $currencyRate)
+	{
+		$this->sid_keys['FX'] = sprintf('%.3f', $currencyRate);
+
+		return $this;
+	}
+
+	/**
 	 * Metoda vrátí QR Platbu nebo Fakturu s integrovanou QR Platbou jako textový řetězec.
 	 *
 	 * @return string
@@ -387,25 +647,38 @@ class QRInvoice
 		$encoded_string = '';
 
 		// QR Platba
-		$chunks = ['SPD', self::SPD_VERSION];
-		foreach ($this->spd_keys as $key => $value) {
-			if (null === $value) {
-				continue;
-			}
-			$chunks[] = $key.':'.$value;
-		}
-		$encoded_string .= implode('*', $chunks);
-
-		// QR Faktura
-		if (!is_null($this->sid_keys['ID']) && !is_null($this->sid_keys['DD'])) {
-			$chunks = ['SID', self::SID_VERSION];
-			foreach ($this->sid_keys as $key => $value) {
+		if ($this->isOnlyInvoice===false) {
+			$chunks = ['SPD', self::SPD_VERSION];
+			foreach ($this->spd_keys as $key => $value) {
 				if (null === $value) {
 					continue;
 				}
 				$chunks[] = $key.':'.$value;
 			}
-			$encoded_string .= '*X-INV:'.implode('%2A', $chunks).'*';
+			$encoded_string .= implode('*', $chunks);
+		}
+
+		// QR Faktura
+		if (!is_null($this->sid_keys['ID']) && !is_null($this->sid_keys['DD'])) {
+			$chunks = ['SID', self::SID_VERSION];
+			foreach ($this->sid_keys as $key => $value) {
+				if (
+					null === $value ||
+					($this->isOnlyInvoice===false && (
+						(isset($this->spd_keys[$key]) && $this->spd_keys[$key]===$value) ||
+						(isset($this->spd_keys['X-'.$key]) && $this->spd_keys['X-'.$key]===$value)
+					))
+				) {
+					continue;
+				}
+				$chunks[] = $key.':'.$value;
+			}
+
+			if ($this->isOnlyInvoice===false) {
+				$encoded_string .= '*X-INV:'.implode('%2A', $chunks).'*';
+			} else {
+				$encoded_string .= implode('*', $chunks).'*';
+			}
 		}
 
 		return $encoded_string;
