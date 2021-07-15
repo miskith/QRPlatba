@@ -13,9 +13,9 @@ use PHPUnit\Framework\TestCase;
 use Miskith\QRInvoice\QRInvoice;
 
 /**
- * Class QRInvoiceTest.
+ * Class QRPlatbaTest.
  */
-class QRInvoiceTest extends TestCase
+class QRPlatbaTest extends TestCase
 {
 	/**
 	 * @expectedException \InvalidArgumentException

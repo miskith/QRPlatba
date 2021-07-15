@@ -378,12 +378,15 @@ class QRInvoice
 	}
 
 	/**
-	 * Metoda vrátí QR Platbu jako textový řetězec.
+	 * Metoda vrátí QR Platbu nebo Fakturu s integrovanou QR Platbou jako textový řetězec.
 	 *
 	 * @return string
 	 */
 	public function __toString()
 	{
+		$encoded_string = '';
+
+		// QR Platba
 		$chunks = ['SPD', self::SPD_VERSION];
 		foreach ($this->spd_keys as $key => $value) {
 			if (null === $value) {
@@ -391,8 +394,21 @@ class QRInvoice
 			}
 			$chunks[] = $key.':'.$value;
 		}
+		$encoded_string .= implode('*', $chunks);
 
-		return implode('*', $chunks);
+		// QR Faktura
+		if (!is_null($this->sid_keys['ID']) && !is_null($this->sid_keys['DD'])) {
+			$chunks = ['SID', self::SID_VERSION];
+			foreach ($this->sid_keys as $key => $value) {
+				if (null === $value) {
+					continue;
+				}
+				$chunks[] = $key.':'.$value;
+			}
+			$encoded_string .= '*X-INV:'.implode('%2A', $chunks).'*';
+		}
+
+		return $encoded_string;
 	}
 
 	/**
