@@ -26,7 +26,7 @@ Podporuje PHP ^7.3||^8.0.
 
 `composer require miskith/qr-platba`
 
-## Příklad
+## Příklad QR platby
 
 ```php
 <?php
@@ -35,9 +35,8 @@ require __DIR__ . '/vendor/autoload.php';
 
 use miskith\QRInvoice\QRInvoice;
 
-$qrInvoice = new QRInvoice();
-
-$qrInvoice->setAccount('12-3456789012/0100')
+$qrInvoice = (new QRInvoice)
+    ->setAccount('12-3456789012/0100')
     ->setVariableSymbol('2016001234')
     ->setMessage('Toto je první QR platba.')
     ->setSpecificSymbol('0308')
@@ -56,6 +55,62 @@ Lze použít i jednodušší zápis:
 echo QRInvoice::create('12-3456789012/0100', 987.60)
     ->setMessage('QR platba je parádní!')
     ->getQRCodeImage();
+```
+## Příklad QR faktury a platby v jednom
+
+```php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+use miskith\QRInvoice\QRInvoice;
+
+$qrInvoice = QRInvoice::create('27-16060243/0300', 495.00, '012150672')
+    ->setInvoiceId('012150672')
+    ->setDueDate(new \DateTime('2015-12-17'))
+    ->setInvoiceDate(new \DateTime('2015-12-01'))
+    ->setTaxDate(new \DateTime('2015-12-01'))
+    ->setTaxPerformance(0)
+    ->setCompanyTaxId('CZ60194383')
+    ->setCompanyRegistrationId('60194383')
+    ->setInvoiceSubjectTaxId('CZ12345678')
+    ->setTaxBase(409.09, 0)
+    ->setTaxAmount(85.91, 0);
+
+echo $qrInvoice->getQRCodeImage(); // Zobrazí <img> tag s kódem, viz níže
+```
+## Příklad QR faktury (pouze faktura bez platby)
+
+```php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+use miskith\QRInvoice\QRInvoice;
+
+$qrInvoice = (new QRInvoice)
+    ->setIban('CZ9701000000007098760287+KOMBCZPP')
+    ->setAmount(61189.00)
+    ->setVariableSymbol('3310001054')
+    ->setInvoiceId('2001401154')
+    ->setInvoiceDocumentType(9)
+    ->setDueDate(new \DateTime('2018-04-12'))
+    ->setInvoiceDate(new \DateTime('2014-04-04'))
+    ->setTaxDate(new \DateTime('2014-04-04'))
+    ->setTaxPerformance(0)
+    ->setCompanyTaxId('CZ25568736')
+    ->setCompanyRegistrationId('25568736')
+    ->setInvoiceSubjectTaxId('CZ25568736')
+    ->setInvoiceSubjectRegistrationId('25568736')
+    ->setMessage('Dodávka vybavení interiéru hotelu Kamzík')
+    ->setTaxBase(26492.70, 0)
+    ->setTaxAmount(5563.47, 0)
+    ->setTaxBase(25333.10, 1)
+    ->setTaxAmount(3799.97, 1)
+    ->setNoTaxAmount(-0.24)
+    ->setInvoiceIncludingDeposit(false);
+
+echo $qrInvoice->getQRCodeImage(); // Zobrazí <img> tag s kódem, viz níže
 ```
 
 ### Další možnosti
