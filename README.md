@@ -47,7 +47,7 @@ $qrInvoice = (new QRInvoice)
 echo $qrInvoice->getQRCodeImage(); // Zobrazí <img> tag s kódem, viz níže
 ```
 
-![Ukázka](qrcode.png)
+![Ukázka](readme/qrpayment.png)
 
 Lze použít i jednodušší zápis:
 
