@@ -51,9 +51,9 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/miskith.html"><abbr title="\Miskith">Miskith</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/miskith.html"><abbr title="\miskith">miskith</abbr></a></h4>
                 <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/miskith-qrinvoice.html"><abbr title="\Miskith\QRInvoice">QRInvoice</abbr></a></li>
+                                            <li><a href="namespaces/miskith-qrinvoice.html"><abbr title="\miskith\QRInvoice">QRInvoice</abbr></a></li>
                                     </ul>
                         </section>
 
@@ -73,7 +73,7 @@
 
             <div class="phpdocumentor-column -eight phpdocumentor-content">
                     <ul class="phpdocumentor-breadcrumbs">
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/miskith.html">Miskith</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/miskith.html">miskith</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/miskith-qrinvoice.html">QRInvoice</a></li>
     </ul>
 
@@ -125,140 +125,280 @@
 
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#constant_VERSION">VERSION</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#constant_SID_VERSION">SID_VERSION</a>
+    <span>
+        &nbsp;= &#039;1.0&#039;                    </span>
+</dt>
+<dd>Verze QR formátu QR Faktury.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#constant_SPD_VERSION">SPD_VERSION</a>
     <span>
         &nbsp;= &#039;1.0&#039;                    </span>
 </dt>
 <dd>Verze QR formátu QR Platby.</dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#property_currencies">$currencies</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#property_currencies">$currencies</a>
     <span>
                 &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#property_keys">$keys</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#property_isOnlyInvoice">$isOnlyInvoice</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd>Přepínač, zda se má generovat pouze QR Faktura</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#property_sid_keys">$sid_keys</a>
+    <span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#property_spd_keys">$spd_keys</a>
     <span>
                 &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 <dd></dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method___construct">__construct()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method___construct">__construct()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd>Kontruktor nové platby.</dd>
+<dd>Konstruktor nové platby.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method___toString">__toString()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method___toString">__toString()</a>
     <span>
                         &nbsp;: string    </span>
 </dt>
-<dd>Metoda vrátí QR Platbu jako textový řetězec.</dd>
+<dd>Metoda vrátí QR Platbu nebo Fakturu s integrovanou QR Platbou jako textový řetězec.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_accountToIban">accountToIban()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_accountToIban">accountToIban()</a>
     <span>
                         &nbsp;: string    </span>
 </dt>
 <dd>Převedení čísla účtu na formát IBAN.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_create">create()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_create">create()</a>
     <span>
-                        &nbsp;: <a href="classes/Miskith-QRInvoice-QRInvoice.html"><abbr title="\Miskith\QRInvoice\QRInvoice">QRInvoice</abbr></a>    </span>
+                        &nbsp;: <a href="classes/miskith-QRInvoice-QRInvoice.html"><abbr title="\miskith\QRInvoice\QRInvoice">QRInvoice</abbr></a>    </span>
 </dt>
 <dd>Statický konstruktor nové platby.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_getQRCodeImage">getQRCodeImage()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_getQRCodeImage">getQRCodeImage()</a>
     <span>
                         &nbsp;: string    </span>
 </dt>
 <dd>Metoda vrátí QR kód jako HTML tag, případně jako data-uri.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_getQRCodeInstance">getQRCodeInstance()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_getQRCodeInstance">getQRCodeInstance()</a>
     <span>
                         &nbsp;: <abbr title="\Endroid\QrCode\QrCode">QrCode</abbr>    </span>
 </dt>
 <dd>Instance třídy QrCode pro libovolné úpravy (barevnost, atd.).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_saveQRCodeImage">saveQRCodeImage()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_saveQRCodeImage">saveQRCodeImage()</a>
     <span>
-                        &nbsp;: <a href="classes/Miskith-QRInvoice-QRInvoice.html"><abbr title="\Miskith\QRInvoice\QRInvoice">QRInvoice</abbr></a>    </span>
+                        &nbsp;: <a href="classes/miskith-QRInvoice-QRInvoice.html"><abbr title="\miskith\QRInvoice\QRInvoice">QRInvoice</abbr></a>    </span>
 </dt>
 <dd>Uložení QR kódu do souboru.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setAccount">setAccount()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setAccount">setAccount()</a>
     <span>
                         &nbsp;: $this    </span>
 </dt>
 <dd>Nastavení čísla účtu ve formátu 12-3456789012/0100.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setAmount">setAmount()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setAmount">setAmount()</a>
     <span>
                         &nbsp;: $this    </span>
 </dt>
 <dd>Nastavení částky.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setConstantSymbol">setConstantSymbol()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setCompanyRegistrationId">setCompanyRegistrationId()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení IČO výstavce</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setCompanyTaxId">setCompanyTaxId()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení DIČ výstavce</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setConstantSymbol">setConstantSymbol()</a>
     <span>
                         &nbsp;: $this    </span>
 </dt>
 <dd>Nastavení konstatního symbolu.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setCurrency">setCurrency()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setCurrency">setCurrency()</a>
     <span>
                         &nbsp;: $this    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setDueDate">setDueDate()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setCurrencyRate">setCurrencyRate()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení směnného kurzu mezi CZK a měnou celkové částky</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setDueDate">setDueDate()</a>
     <span>
                         &nbsp;: $this    </span>
 </dt>
 <dd>Nastavení data úhrady.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setMessage">setMessage()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceDate">setInvoiceDate()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení data vydání faktury</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceDocumentType">setInvoiceDocumentType()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení identifikace typu dokladu</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceId">setInvoiceId()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení ID faktury</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceIncludingDeposit">setInvoiceIncludingDeposit()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení příznaku, který rozlišuje, zda faktura obsahuje zúčtování záloh</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceRelatedId">setInvoiceRelatedId()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení čísla (označení) objednávky, k níž se vztahuje tento účetní doklad</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceSubjectRegistrationId">setInvoiceSubjectRegistrationId()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení IČO příjemce</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceSubjectTaxId">setInvoiceSubjectTaxId()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení DIČ příjemce</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setIsOnlyInvoice">setIsOnlyInvoice()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Přepínač, zda se má generovat pouze QR Faktura</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setMessage">setMessage()</a>
     <span>
                         &nbsp;: $this    </span>
 </dt>
 <dd>Nastavení zprávy pro příjemce. Z řetězce bude odstraněna diaktirika.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setRecipientName">setRecipientName()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setNoTaxAmount">setNoTaxAmount()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení částky osvobozených plnění, plnění mimo předmět DPH, plnění neplátců DPH v CZK včetně haléřového vyrovnání</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setRecipientName">setRecipientName()</a>
     <span>
                         &nbsp;: $this    </span>
 </dt>
 <dd>Nastavení jména příjemce. Z řetězce bude odstraněna diaktirika.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setSpecificSymbol">setSpecificSymbol()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setSpecificSymbol">setSpecificSymbol()</a>
     <span>
                         &nbsp;: $this    </span>
 </dt>
 <dd>Nastavení specifického symbolu.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setVariableSymbol">setVariableSymbol()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setTaxAmount">setTaxAmount()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení částky daně v CZK včetně haléřového vyrovnání</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setTaxBase">setTaxBase()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení částky základu daně v CZK včetně haléřového vyrovnání</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setTaxDate">setTaxDate()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení data uskutečnění zdanitelného plnění</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setTaxPerformance">setTaxPerformance()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení typu daňového plnění</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setTaxReportDate">setTaxReportDate()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Nastavení data povinnosti přiznat daň</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setVariableSymbol">setVariableSymbol()</a>
     <span>
                         &nbsp;: $this    </span>
 </dt>
 <dd>Nastavení variabilního symbolu.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_stripDiacritics">stripDiacritics()</a>
+    <a href="classes/miskith-QRInvoice-QRInvoice.html#method_stripDiacritics">stripDiacritics()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
@@ -272,12 +412,39 @@
     <section class="phpdocumentor-constants">
         <h3 class="phpdocumentor-elements__header" id="constants">
             Constants
-            <a href="classes/Miskith-QRInvoice-QRInvoice.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/miskith-QRInvoice-QRInvoice.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_VERSION">
-        VERSION
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#constant_VERSION" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="constant_SID_VERSION">
+        SID_VERSION
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#constant_SID_VERSION" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Verze QR formátu QR Faktury.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">SID_VERSION</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;1.0&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SPD_VERSION">
+        SPD_VERSION
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#constant_SPD_VERSION" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
@@ -291,7 +458,7 @@
     <code class="phpdocumentor-signature phpdocumentor-code ">
     <span class="phpdocumentor-signature__visibility">public</span>
     <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">VERSION</span>
+    <span class="phpdocumentor-signature__name">SPD_VERSION</span>
     = <span class="phpdocumentor-signature__default-value">&#039;1.0&#039;</span>
 </code>
 
@@ -307,7 +474,7 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Miskith-QRInvoice-QRInvoice.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/miskith-QRInvoice-QRInvoice.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="
@@ -318,14 +485,14 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_currencies">
         $currencies
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#property_currencies" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#property_currencies" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">45</span>
 </aside>
 
     
@@ -347,30 +514,153 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_keys">
-        $keys
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#property_keys" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_isOnlyInvoice">
+        $isOnlyInvoice
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#property_isOnlyInvoice" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">63</span>
+    <span class="phpdocumentor-element-found-in__line">176</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Přepínač, zda se má generovat pouze QR Faktura</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$isOnlyInvoice</span>
+     = <span class="phpdocumentor-signature__default-value">false</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_sid_keys">
+        $sid_keys
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#property_sid_keys" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">110</span>
 </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
-    <span class="phpdocumentor-signature__name">$keys</span>
+    <span class="phpdocumentor-signature__name">$sid_keys</span>
+     = <span class="phpdocumentor-signature__default-value">[
+    &#039;ID&#039; =&gt; null,
+    // Max. 40 znaků - Jednoznačné označení dokladu
+    &#039;DD&#039; =&gt; null,
+    // Právě 8 znaků - Datum vystavení dokladu ve formátu YYYYMMDD
+    &#039;AM&#039; =&gt; null,
+    // Max. 18 znaků - Výše celkové částky k úhradě v měně specifikované klíčem CC
+    &#039;TP&#039; =&gt; null,
+    // Právě 1 znak - Identifikace typu daňového plnění
+    &#039;TD&#039; =&gt; null,
+    // Právě 1 znak - Identifikace typu dokladu
+    &#039;SA&#039; =&gt; null,
+    // Právě 1 znak - Příznak, který rozlišuje, zda faktura obsahuje zúčtování záloh
+    &#039;MSG&#039; =&gt; null,
+    // Max. 40 znaků - Textový popis předmětu fakturace
+    &#039;ON&#039; =&gt; null,
+    // Max. 20 znaků - Číslo (označení) objednávky, k níž se vztahuje tento účetní doklad
+    &#039;VS&#039; =&gt; null,
+    // Max. 10 znaků - Variabilní symbol
+    &#039;VII&#039; =&gt; null,
+    // Max. 14 znaků - DIČ výstavce
+    &#039;INI&#039; =&gt; null,
+    // Max. 8 znaků - IČO výstavce
+    &#039;VIR&#039; =&gt; null,
+    // Max. 14 znaků - DIČ příjemce
+    &#039;INR&#039; =&gt; null,
+    // Max. 8 znaků - IČO příjemce
+    &#039;DUZP&#039; =&gt; null,
+    // Právě 8 znaků - Datum uskutečnění zdanitelného plnění ve formátu YYYYMMDD
+    &#039;DPPD&#039; =&gt; null,
+    // Právě 8 znaků - Datum povinnosti přiznat daň ve formátu YYYYMMDD
+    &#039;DT&#039; =&gt; null,
+    // Právě 8 znaků - Datum splatnosti celkové částky ve formátu YYYYMMDD
+    &#039;TB0&#039; =&gt; null,
+    // Max. 18 znaků - Částka základu daně v základní daňové sazbě v CZK včetně haléřového vyrovnání
+    &#039;T0&#039; =&gt; null,
+    // Max. 18 znaků - Částka daně v základní daňové sazbě v CZK včetně haléřového vyrovnání
+    &#039;TB1&#039; =&gt; null,
+    // Max. 18 znaků - Částka základu daně v první snížené daňové sazbě v CZK včetně haléřového vyrovnání
+    &#039;T1&#039; =&gt; null,
+    // Max. 18 znaků - Částka daně v první snížené daňové sazbě v CZK včetně haléřového vyrovnání
+    &#039;TB2&#039; =&gt; null,
+    // Max. 18 znaků - Částka základu daně ve druhé snížené daňové sazbě v CZK včetně haléřového vyrovnání
+    &#039;T2&#039; =&gt; null,
+    // Max. 18 znaků - Částka daně ve druhé snížené daňové sazbě v CZK včetně haléřového vyrovnání
+    &#039;NTB&#039; =&gt; null,
+    // Max. 18 znaků - Částka osvobozených plnění, plnění mimo předmět DPH, plnění neplátců DPH v CZK včetně haléřového vyrovnání. V případě kladné hodnoty bez znaménka, záporná hodnota se znaménkem. Znaménko vždy explicitně určuje směr toku peněz bez ohledu na jiné atributy
+    &#039;CC&#039; =&gt; &#039;CZK&#039;,
+    // Právě 3 znaky - Měna celkové částky. Není-li klíč v řetězci přítomen = měna je CZK
+    &#039;FX&#039; =&gt; null,
+    // Max. 18 znaků - Směnný kurz mezi CZK a měnou celkové částky
+    &#039;FXA&#039; =&gt; null,
+    // Max. 5 znaků - Počet jednotek cizí měny pro přepočet pomocí klíče FX. Není-li v řetězci klíč přítomen = 1
+    &#039;ACC&#039; =&gt; null,
+    // Max. 46 - Identifikace čísla účtu výstavce faktury, která je složena ze dvou komponent oddělených znaménkem + Tyto komponenty jsou: číslo účtu ve formátu IBAN identifikace banky ve formátu SWIFT dle ISO 9362. Druhá komponenta (SWIFT) je přitom volitelná
+    &#039;CRC32&#039; =&gt; null,
+    // Právě 8 znaků - Kontrolní součet. Hodnota vznikne výpočtem CRC32 celého řetězce (bez klíče CRC32) a převedením této číselné hodnoty do hexadecimálního zápisu.
+    &#039;X-SW&#039; =&gt; null,
+    // Max. 30 - Označení účetního software, ve kterém byl řetězec QR Faktury (faktura) vytvořen. Libovolný řetězec dle rozhodnutí výrobce účetního software. Označení by mělo být obecně unikátní a neměnné pro daný software (nebo jeho verzi).
+    &#039;X-URL&#039; =&gt; null,
+]</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_spd_keys">
+        $spd_keys
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#property_spd_keys" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">68</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$spd_keys</span>
      = <span class="phpdocumentor-signature__default-value">[
     &#039;ACC&#039; =&gt; null,
     // Max. 46 - znaků IBAN, BIC Identifikace protistrany !povinny
     &#039;ALT-ACC&#039; =&gt; null,
     // Max. 93 - znaků Seznam alternativnich uctu. odddeleny carkou,
     &#039;AM&#039; =&gt; null,
-    //Max. 10 znaků - Desetinné číslo Výše částky platby.
+    // Max. 10 znaků - Desetinné číslo Výše částky platby.
     &#039;CC&#039; =&gt; &#039;CZK&#039;,
     // Právě 3 znaky - Měna platby.
     &#039;DT&#039; =&gt; null,
@@ -394,11 +684,11 @@
     &#039;NT&#039; =&gt; null,
     // Právě 1 znak P|E - Identifikace kanálu pro zaslání notifikace výstavci platby.
     &#039;NTA&#039; =&gt; null,
-    //Max. 320 znaků - Telefonní číslo v mezinárodním nebo lokálním vyjádření nebo E-mailová adresa
+    // Max. 320 znaků - Telefonní číslo v mezinárodním nebo lokálním vyjádření nebo E-mailová adresa
     &#039;X-PER&#039; =&gt; null,
-    // Max. 2 znaky -  Celé číslo - Počet dní, po které se má provádět pokus o opětovné provedení neúspěšné platby
+    // Max. 2 znaky - Celé číslo - Počet dní, po které se má provádět pokus o opětovné provedení neúspěšné platby
     &#039;X-ID&#039; =&gt; null,
-    // Max. 20 znaků. -  Identifikátor platby na straně příkazce. Jedná se o interní ID, jehož použití a interpretace závisí na bance příkazce.
+    // Max. 20 znaků. - Identifikátor platby na straně příkazce. Jedná se o interní ID, jehož použití a interpretace závisí na bance příkazce.
     &#039;X-URL&#039; =&gt; null,
 ]</span></code>
 
@@ -412,7 +702,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Miskith-QRInvoice-QRInvoice.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/miskith-QRInvoice-QRInvoice.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -422,15 +712,15 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">111</span>
+    <span class="phpdocumentor-element-found-in__line">187</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Kontruktor nové platby.</p>
+        <p class="phpdocumentor-summary">Konstruktor nové platby.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -506,15 +796,15 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___toString">
         __toString()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method___toString" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method___toString" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">281</span>
+    <span class="phpdocumentor-element-found-in__line">645</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Metoda vrátí QR Platbu jako textový řetězec.</p>
+        <p class="phpdocumentor-summary">Metoda vrátí QR Platbu nebo Fakturu s integrovanou QR Platbou jako textový řetězec.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -540,12 +830,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_accountToIban">
         accountToIban()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_accountToIban" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_accountToIban" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">379</span>
+    <span class="phpdocumentor-element-found-in__line">772</span>
 </aside>
 
         <p class="phpdocumentor-summary">Převedení čísla účtu na formát IBAN.</p>
@@ -585,19 +875,19 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_create">
         create()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_create" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_create" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">137</span>
+    <span class="phpdocumentor-element-found-in__line">213</span>
 </aside>
 
         <p class="phpdocumentor-summary">Statický konstruktor nové platby.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">create</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$account</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$amount</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$variable</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Miskith-QRInvoice-QRInvoice.html"><abbr title="\Miskith\QRInvoice\QRInvoice">QRInvoice</abbr></a></span></code>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">create</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$account</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$amount</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$variable</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/miskith-QRInvoice-QRInvoice.html"><abbr title="\miskith\QRInvoice\QRInvoice">QRInvoice</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -647,7 +937,7 @@
                         </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Miskith-QRInvoice-QRInvoice.html"><abbr title="\Miskith\QRInvoice\QRInvoice">QRInvoice</abbr></a></span>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/miskith-QRInvoice-QRInvoice.html"><abbr title="\miskith\QRInvoice\QRInvoice">QRInvoice</abbr></a></span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -661,12 +951,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_getQRCodeImage">
         getQRCodeImage()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_getQRCodeImage" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_getQRCodeImage" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">302</span>
+    <span class="phpdocumentor-element-found-in__line">695</span>
 </aside>
 
         <p class="phpdocumentor-summary">Metoda vrátí QR kód jako HTML tag, případně jako data-uri.</p>
@@ -721,12 +1011,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_getQRCodeInstance">
         getQRCodeInstance()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_getQRCodeInstance" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_getQRCodeInstance" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">360</span>
+    <span class="phpdocumentor-element-found-in__line">753</span>
 </aside>
 
         <p class="phpdocumentor-summary">Instance třídy QrCode pro libovolné úpravy (barevnost, atd.).</p>
@@ -773,19 +1063,19 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_saveQRCodeImage">
         saveQRCodeImage()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_saveQRCodeImage" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_saveQRCodeImage" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">323</span>
+    <span class="phpdocumentor-element-found-in__line">716</span>
 </aside>
 
         <p class="phpdocumentor-summary">Uložení QR kódu do souboru.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">saveQRCodeImage</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filename</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$format</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;png&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$size</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">300</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$margin</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">10</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Miskith-QRInvoice-QRInvoice.html"><abbr title="\Miskith\QRInvoice\QRInvoice">QRInvoice</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">saveQRCodeImage</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filename</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$format</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;png&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$size</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">300</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$margin</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">10</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/miskith-QRInvoice-QRInvoice.html"><abbr title="\miskith\QRInvoice\QRInvoice">QRInvoice</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -844,7 +1134,7 @@
                         </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Miskith-QRInvoice-QRInvoice.html"><abbr title="\Miskith\QRInvoice\QRInvoice">QRInvoice</abbr></a></span>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/miskith-QRInvoice-QRInvoice.html"><abbr title="\miskith\QRInvoice\QRInvoice">QRInvoice</abbr></a></span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -858,12 +1148,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_setAccount">
         setAccount()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setAccount" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setAccount" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">149</span>
+    <span class="phpdocumentor-element-found-in__line">225</span>
 </aside>
 
         <p class="phpdocumentor-summary">Nastavení čísla účtu ve formátu 12-3456789012/0100.</p>
@@ -903,12 +1193,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_setAmount">
         setAmount()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setAmount" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setAmount" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">163</span>
+    <span class="phpdocumentor-element-found-in__line">239</span>
 </aside>
 
         <p class="phpdocumentor-summary">Nastavení částky.</p>
@@ -946,28 +1236,148 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setConstantSymbol">
-        setConstantSymbol()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setConstantSymbol" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setCompanyRegistrationId">
+        setCompanyRegistrationId()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setCompanyRegistrationId" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">191</span>
+    <span class="phpdocumentor-element-found-in__line">495</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Nastavení konstatního symbolu.</p>
+        <p class="phpdocumentor-summary">Nastavení IČO výstavce</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setConstantSymbol</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$cs</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+                <span class="phpdocumentor-signature__name">setCompanyRegistrationId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$ini</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
 
         <section class="phpdocumentor-description"></section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$cs</span>
+                <span class="phpdocumentor-signature__argument__name">$ini</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\InvalidArgumentException">InvalidArgumentException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"></section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setCompanyTaxId">
+        setCompanyTaxId()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setCompanyTaxId" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">476</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení DIČ výstavce</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setCompanyTaxId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$vii</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$vii</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\InvalidArgumentException">InvalidArgumentException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"></section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setConstantSymbol">
+        setConstantSymbol()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setConstantSymbol" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">267</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení konstatního symbolu.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setConstantSymbol</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$ks</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$ks</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
@@ -993,12 +1403,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_setCurrency">
         setCurrency()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setCurrency" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setCurrency" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">265</span>
+    <span class="phpdocumentor-element-found-in__line">341</span>
 </aside>
 
     
@@ -1050,14 +1460,59 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setDueDate">
-        setDueDate()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setDueDate" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setCurrencyRate">
+        setCurrencyRate()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setCurrencyRate" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">252</span>
+    <span class="phpdocumentor-element-found-in__line">633</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení směnného kurzu mezi CZK a měnou celkové částky</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setCurrencyRate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">float&nbsp;</span><span class="phpdocumentor-signature__argument__name">$currencyRate</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$currencyRate</span>
+                : <span class="phpdocumentor-signature__argument__return-type">float</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setDueDate">
+        setDueDate()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setDueDate" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">328</span>
 </aside>
 
         <p class="phpdocumentor-summary">Nastavení data úhrady.</p>
@@ -1095,14 +1550,434 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setMessage">
-        setMessage()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setMessage" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setInvoiceDate">
+        setInvoiceDate()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceDate" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">224</span>
+    <span class="phpdocumentor-element-found-in__line">392</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení data vydání faktury</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setInvoiceDate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateTime">DateTime</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$date</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$date</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateTime">DateTime</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setInvoiceDocumentType">
+        setInvoiceDocumentType()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceDocumentType" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">424</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení identifikace typu dokladu</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setInvoiceDocumentType</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$td</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$td</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setInvoiceId">
+        setInvoiceId()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceId" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">374</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení ID faktury</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setInvoiceId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\InvalidArgumentException">InvalidArgumentException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"></section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setInvoiceIncludingDeposit">
+        setInvoiceIncludingDeposit()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceIncludingDeposit" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">442</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení příznaku, který rozlišuje, zda faktura obsahuje zúčtování záloh</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setInvoiceIncludingDeposit</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$sa</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$sa</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setInvoiceRelatedId">
+        setInvoiceRelatedId()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceRelatedId" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">457</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení čísla (označení) objednávky, k níž se vztahuje tento účetní doklad</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setInvoiceRelatedId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$on</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$on</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\InvalidArgumentException">InvalidArgumentException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"></section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setInvoiceSubjectRegistrationId">
+        setInvoiceSubjectRegistrationId()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceSubjectRegistrationId" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">533</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení IČO příjemce</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setInvoiceSubjectRegistrationId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$inr</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$inr</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\InvalidArgumentException">InvalidArgumentException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"></section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setInvoiceSubjectTaxId">
+        setInvoiceSubjectTaxId()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceSubjectTaxId" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">514</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení DIČ příjemce</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setInvoiceSubjectTaxId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$vir</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$vir</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\InvalidArgumentException">InvalidArgumentException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"></section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setIsOnlyInvoice">
+        setIsOnlyInvoice()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setIsOnlyInvoice" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">359</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Přepínač, zda se má generovat pouze QR Faktura</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setIsOnlyInvoice</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$isOnlyInvoice</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$isOnlyInvoice</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setMessage">
+        setMessage()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setMessage" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">300</span>
 </aside>
 
         <p class="phpdocumentor-summary">Nastavení zprávy pro příjemce. Z řetězce bude odstraněna diaktirika.</p>
@@ -1140,14 +2015,59 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setRecipientName">
-        setRecipientName()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setRecipientName" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setNoTaxAmount">
+        setNoTaxAmount()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setNoTaxAmount" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">238</span>
+    <span class="phpdocumentor-element-found-in__line">619</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení částky osvobozených plnění, plnění mimo předmět DPH, plnění neplátců DPH v CZK včetně haléřového vyrovnání</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setNoTaxAmount</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">float&nbsp;</span><span class="phpdocumentor-signature__argument__name">$amount</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$amount</span>
+                : <span class="phpdocumentor-signature__argument__return-type">float</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setRecipientName">
+        setRecipientName()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setRecipientName" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">314</span>
 </aside>
 
         <p class="phpdocumentor-summary">Nastavení jména příjemce. Z řetězce bude odstraněna diaktirika.</p>
@@ -1187,12 +2107,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_setSpecificSymbol">
         setSpecificSymbol()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setSpecificSymbol" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setSpecificSymbol" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">207</span>
+    <span class="phpdocumentor-element-found-in__line">283</span>
 </aside>
 
         <p class="phpdocumentor-summary">Nastavení specifického symbolu.</p>
@@ -1225,7 +2145,7 @@
                     <span class="phpdocumentor-tag__name">throws</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><a href="classes/Miskith-QRInvoice-QRInvoiceException.html"><abbr title="\Miskith\QRInvoice\QRInvoiceException">QRInvoiceException</abbr></a></span>
+                                                                <span class="phpdocumentor-tag-link"><a href="classes/miskith-QRInvoice-QRInvoiceException.html"><abbr title="\miskith\QRInvoice\QRInvoiceException">QRInvoiceException</abbr></a></span>
                                                             
                                                  <section class="phpdocumentor-description"></section>
 
@@ -1245,14 +2165,285 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setVariableSymbol">
-        setVariableSymbol()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_setVariableSymbol" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setTaxAmount">
+        setTaxAmount()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setTaxAmount" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">177</span>
+    <span class="phpdocumentor-element-found-in__line">601</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení částky daně v CZK včetně haléřového vyrovnání</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setTaxAmount</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">float&nbsp;</span><span class="phpdocumentor-signature__argument__name">$amount</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$taxLevelId</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$amount</span>
+                : <span class="phpdocumentor-signature__argument__return-type">float</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$taxLevelId</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\InvalidArgumentException">InvalidArgumentException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"></section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setTaxBase">
+        setTaxBase()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setTaxBase" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">581</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení částky základu daně v CZK včetně haléřového vyrovnání</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setTaxBase</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">float&nbsp;</span><span class="phpdocumentor-signature__argument__name">$amount</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$taxLevelId</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$amount</span>
+                : <span class="phpdocumentor-signature__argument__return-type">float</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$taxLevelId</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\InvalidArgumentException">InvalidArgumentException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"></section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setTaxDate">
+        setTaxDate()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setTaxDate" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">551</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení data uskutečnění zdanitelného plnění</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setTaxDate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$date</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$date</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setTaxPerformance">
+        setTaxPerformance()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setTaxPerformance" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">406</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení typu daňového plnění</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setTaxPerformance</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$tp</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$tp</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setTaxReportDate">
+        setTaxReportDate()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setTaxReportDate" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">565</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Nastavení data povinnosti přiznat daň</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setTaxReportDate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$date</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$date</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setVariableSymbol">
+        setVariableSymbol()
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_setVariableSymbol" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">253</span>
 </aside>
 
         <p class="phpdocumentor-summary">Nastavení variabilního symbolu.</p>
@@ -1292,12 +2483,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_stripDiacritics">
         stripDiacritics()
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#method_stripDiacritics" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#method_stripDiacritics" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/QRInvoice.php"><a href="files/src-qrinvoice.html"><abbr title="src/QRInvoice.php">QRInvoice.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">418</span>
+    <span class="phpdocumentor-element-found-in__line">811</span>
 </aside>
 
         <p class="phpdocumentor-summary">Odstranění diaktitiky.</p>
@@ -1345,7 +2536,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/Miskith-QRInvoice-QRInvoice.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/miskith-QRInvoice-QRInvoice.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

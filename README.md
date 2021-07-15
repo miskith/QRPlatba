@@ -33,7 +33,7 @@ Podporuje PHP ^7.3||^8.0.
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Miskith\QRInvoice\QRInvoice;
+use miskith\QRInvoice\QRInvoice;
 
 $qrInvoice = new QRInvoice();
 

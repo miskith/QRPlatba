@@ -1,128 +1,228 @@
 Search.appendIndex(
     [
                 {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice",
             "name": "QRInvoice",
             "summary": "Knihovna\u0020pro\u0020generov\u00E1n\u00ED\u0020QR\u0020plateb\u0020v\u0020PHP.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Kontruktor\u0020nov\u00E9\u0020platby.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method___construct"
+            "summary": "Konstruktor\u0020nov\u00E9\u0020platby.",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method___construct"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003Acreate\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003Acreate\u0028\u0029",
             "name": "create",
             "summary": "Statick\u00FD\u0020konstruktor\u0020nov\u00E9\u0020platby.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_create"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_create"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetAccount\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetAccount\u0028\u0029",
             "name": "setAccount",
             "summary": "Nastaven\u00ED\u0020\u010D\u00EDsla\u0020\u00FA\u010Dtu\u0020ve\u0020form\u00E1tu\u002012\u002D3456789012\/0100.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setAccount"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setAccount"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetAmount\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetAmount\u0028\u0029",
             "name": "setAmount",
             "summary": "Nastaven\u00ED\u0020\u010D\u00E1stky.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setAmount"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setAmount"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetVariableSymbol\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetVariableSymbol\u0028\u0029",
             "name": "setVariableSymbol",
             "summary": "Nastaven\u00ED\u0020variabiln\u00EDho\u0020symbolu.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setVariableSymbol"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setVariableSymbol"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetConstantSymbol\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetConstantSymbol\u0028\u0029",
             "name": "setConstantSymbol",
             "summary": "Nastaven\u00ED\u0020konstatn\u00EDho\u0020symbolu.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setConstantSymbol"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setConstantSymbol"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetSpecificSymbol\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetSpecificSymbol\u0028\u0029",
             "name": "setSpecificSymbol",
             "summary": "Nastaven\u00ED\u0020specifick\u00E9ho\u0020symbolu.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setSpecificSymbol"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setSpecificSymbol"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetMessage\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetMessage\u0028\u0029",
             "name": "setMessage",
             "summary": "Nastaven\u00ED\u0020zpr\u00E1vy\u0020pro\u0020p\u0159\u00EDjemce.\u0020Z\u0020\u0159et\u011Bzce\u0020bude\u0020odstran\u011Bna\u0020diaktirika.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setMessage"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setMessage"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetRecipientName\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetRecipientName\u0028\u0029",
             "name": "setRecipientName",
             "summary": "Nastaven\u00ED\u0020jm\u00E9na\u0020p\u0159\u00EDjemce.\u0020Z\u0020\u0159et\u011Bzce\u0020bude\u0020odstran\u011Bna\u0020diaktirika.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setRecipientName"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setRecipientName"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetDueDate\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetDueDate\u0028\u0029",
             "name": "setDueDate",
             "summary": "Nastaven\u00ED\u0020data\u0020\u00FAhrady.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setDueDate"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setDueDate"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsetCurrency\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetCurrency\u0028\u0029",
             "name": "setCurrency",
             "summary": "",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_setCurrency"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setCurrency"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003A__toString\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetIsOnlyInvoice\u0028\u0029",
+            "name": "setIsOnlyInvoice",
+            "summary": "P\u0159ep\u00EDna\u010D,\u0020zda\u0020se\u0020m\u00E1\u0020generovat\u0020pouze\u0020QR\u0020Faktura",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setIsOnlyInvoice"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetInvoiceId\u0028\u0029",
+            "name": "setInvoiceId",
+            "summary": "Nastaven\u00ED\u0020ID\u0020faktury",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceId"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetInvoiceDate\u0028\u0029",
+            "name": "setInvoiceDate",
+            "summary": "Nastaven\u00ED\u0020data\u0020vyd\u00E1n\u00ED\u0020faktury",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceDate"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetTaxPerformance\u0028\u0029",
+            "name": "setTaxPerformance",
+            "summary": "Nastaven\u00ED\u0020typu\u0020da\u0148ov\u00E9ho\u0020pln\u011Bn\u00ED",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setTaxPerformance"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetInvoiceDocumentType\u0028\u0029",
+            "name": "setInvoiceDocumentType",
+            "summary": "Nastaven\u00ED\u0020identifikace\u0020typu\u0020dokladu",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceDocumentType"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetInvoiceIncludingDeposit\u0028\u0029",
+            "name": "setInvoiceIncludingDeposit",
+            "summary": "Nastaven\u00ED\u0020p\u0159\u00EDznaku,\u0020kter\u00FD\u0020rozli\u0161uje,\u0020zda\u0020faktura\u0020obsahuje\u0020z\u00FA\u010Dtov\u00E1n\u00ED\u0020z\u00E1loh",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceIncludingDeposit"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetInvoiceRelatedId\u0028\u0029",
+            "name": "setInvoiceRelatedId",
+            "summary": "Nastaven\u00ED\u0020\u010D\u00EDsla\u0020\u0028ozna\u010Den\u00ED\u0029\u0020objedn\u00E1vky,\u0020k\u0020n\u00ED\u017E\u0020se\u0020vztahuje\u0020tento\u0020\u00FA\u010Detn\u00ED\u0020doklad",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceRelatedId"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetCompanyTaxId\u0028\u0029",
+            "name": "setCompanyTaxId",
+            "summary": "Nastaven\u00ED\u0020DI\u010C\u0020v\u00FDstavce",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setCompanyTaxId"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetCompanyRegistrationId\u0028\u0029",
+            "name": "setCompanyRegistrationId",
+            "summary": "Nastaven\u00ED\u0020I\u010CO\u0020v\u00FDstavce",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setCompanyRegistrationId"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetInvoiceSubjectTaxId\u0028\u0029",
+            "name": "setInvoiceSubjectTaxId",
+            "summary": "Nastaven\u00ED\u0020DI\u010C\u0020p\u0159\u00EDjemce",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceSubjectTaxId"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetInvoiceSubjectRegistrationId\u0028\u0029",
+            "name": "setInvoiceSubjectRegistrationId",
+            "summary": "Nastaven\u00ED\u0020I\u010CO\u0020p\u0159\u00EDjemce",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setInvoiceSubjectRegistrationId"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetTaxDate\u0028\u0029",
+            "name": "setTaxDate",
+            "summary": "Nastaven\u00ED\u0020data\u0020uskute\u010Dn\u011Bn\u00ED\u0020zdaniteln\u00E9ho\u0020pln\u011Bn\u00ED",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setTaxDate"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetTaxReportDate\u0028\u0029",
+            "name": "setTaxReportDate",
+            "summary": "Nastaven\u00ED\u0020data\u0020povinnosti\u0020p\u0159iznat\u0020da\u0148",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setTaxReportDate"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetTaxBase\u0028\u0029",
+            "name": "setTaxBase",
+            "summary": "Nastaven\u00ED\u0020\u010D\u00E1stky\u0020z\u00E1kladu\u0020dan\u011B\u0020v\u0020CZK\u0020v\u010Detn\u011B\u0020hal\u00E9\u0159ov\u00E9ho\u0020vyrovn\u00E1n\u00ED",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setTaxBase"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetTaxAmount\u0028\u0029",
+            "name": "setTaxAmount",
+            "summary": "Nastaven\u00ED\u0020\u010D\u00E1stky\u0020dan\u011B\u0020v\u0020CZK\u0020v\u010Detn\u011B\u0020hal\u00E9\u0159ov\u00E9ho\u0020vyrovn\u00E1n\u00ED",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setTaxAmount"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetNoTaxAmount\u0028\u0029",
+            "name": "setNoTaxAmount",
+            "summary": "Nastaven\u00ED\u0020\u010D\u00E1stky\u0020osvobozen\u00FDch\u0020pln\u011Bn\u00ED,\u0020pln\u011Bn\u00ED\u0020mimo\u0020p\u0159edm\u011Bt\u0020DPH,\u0020pln\u011Bn\u00ED\u0020nepl\u00E1tc\u016F\u0020DPH\u0020v\u0020CZK\u0020v\u010Detn\u011B\u0020hal\u00E9\u0159ov\u00E9ho\u0020vyrovn\u00E1n\u00ED",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setNoTaxAmount"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsetCurrencyRate\u0028\u0029",
+            "name": "setCurrencyRate",
+            "summary": "Nastaven\u00ED\u0020sm\u011Bnn\u00E9ho\u0020kurzu\u0020mezi\u0020CZK\u0020a\u0020m\u011Bnou\u0020celkov\u00E9\u0020\u010D\u00E1stky",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_setCurrencyRate"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
-            "summary": "Metoda\u0020vr\u00E1t\u00ED\u0020QR\u0020Platbu\u0020jako\u0020textov\u00FD\u0020\u0159et\u011Bzec.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method___toString"
+            "summary": "Metoda\u0020vr\u00E1t\u00ED\u0020QR\u0020Platbu\u0020nebo\u0020Fakturu\u0020s\u0020integrovanou\u0020QR\u0020Platbou\u0020jako\u0020textov\u00FD\u0020\u0159et\u011Bzec.",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method___toString"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AgetQRCodeImage\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AgetQRCodeImage\u0028\u0029",
             "name": "getQRCodeImage",
             "summary": "Metoda\u0020vr\u00E1t\u00ED\u0020QR\u0020k\u00F3d\u0020jako\u0020HTML\u0020tag,\u0020p\u0159\u00EDpadn\u011B\u0020jako\u0020data\u002Duri.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_getQRCodeImage"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_getQRCodeImage"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AsaveQRCodeImage\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AsaveQRCodeImage\u0028\u0029",
             "name": "saveQRCodeImage",
             "summary": "Ulo\u017Een\u00ED\u0020QR\u0020k\u00F3du\u0020do\u0020souboru.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_saveQRCodeImage"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_saveQRCodeImage"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AgetQRCodeInstance\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AgetQRCodeInstance\u0028\u0029",
             "name": "getQRCodeInstance",
             "summary": "Instance\u0020t\u0159\u00EDdy\u0020QrCode\u0020pro\u0020libovoln\u00E9\u0020\u00FApravy\u0020\u0028barevnost,\u0020atd.\u0029.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_getQRCodeInstance"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_getQRCodeInstance"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AaccountToIban\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AaccountToIban\u0028\u0029",
             "name": "accountToIban",
             "summary": "P\u0159eveden\u00ED\u0020\u010D\u00EDsla\u0020\u00FA\u010Dtu\u0020na\u0020form\u00E1t\u0020IBAN.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_accountToIban"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_accountToIban"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AstripDiacritics\u0028\u0029",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003AstripDiacritics\u0028\u0029",
             "name": "stripDiacritics",
             "summary": "Odstran\u011Bn\u00ED\u0020diaktitiky.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#method_stripDiacritics"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#method_stripDiacritics"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003AVERSION",
-            "name": "VERSION",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003ASPD_VERSION",
+            "name": "SPD_VERSION",
             "summary": "Verze\u0020QR\u0020form\u00E1tu\u0020QR\u0020Platby.",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#constant_VERSION"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#constant_SPD_VERSION"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003A\u0024currencies",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003ASID_VERSION",
+            "name": "SID_VERSION",
+            "summary": "Verze\u0020QR\u0020form\u00E1tu\u0020QR\u0020Faktury.",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#constant_SID_VERSION"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003A\u0024currencies",
             "name": "currencies",
             "summary": "",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#property_currencies"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#property_currencies"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoice\u003A\u003A\u0024keys",
-            "name": "keys",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003A\u0024spd_keys",
+            "name": "spd_keys",
             "summary": "",
-            "url": "classes/Miskith-QRInvoice-QRInvoice.html#property_keys"
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#property_spd_keys"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice\\QRInvoiceException",
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003A\u0024sid_keys",
+            "name": "sid_keys",
+            "summary": "",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#property_sid_keys"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoice\u003A\u003A\u0024isOnlyInvoice",
+            "name": "isOnlyInvoice",
+            "summary": "P\u0159ep\u00EDna\u010D,\u0020zda\u0020se\u0020m\u00E1\u0020generovat\u0020pouze\u0020QR\u0020Faktura",
+            "url": "classes/miskith-QRInvoice-QRInvoice.html#property_isOnlyInvoice"
+        },                {
+            "fqsen": "\\miskith\\QRInvoice\\QRInvoiceException",
             "name": "QRInvoiceException",
             "summary": "Class\u0020QRInvoiceException.",
-            "url": "classes/Miskith-QRInvoice-QRInvoiceException.html"
+            "url": "classes/miskith-QRInvoice-QRInvoiceException.html"
         },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
             "url": "namespaces/default.html"
         },                {
-            "fqsen": "\\Miskith\\QRInvoice",
+            "fqsen": "\\miskith\\QRInvoice",
             "name": "QRInvoice",
             "summary": "",
             "url": "namespaces/miskith-qrinvoice.html"
         },                {
-            "fqsen": "\\Miskith",
-            "name": "Miskith",
+            "fqsen": "\\miskith",
+            "name": "miskith",
             "summary": "",
             "url": "namespaces/miskith.html"
         }            ]

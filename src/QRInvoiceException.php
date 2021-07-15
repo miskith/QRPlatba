@@ -9,7 +9,7 @@
  * please view LICENSE.
  */
 
-namespace Miskith\QRInvoice;
+namespace miskith\QRInvoice;
 
 /**
  * Class QRInvoiceException.

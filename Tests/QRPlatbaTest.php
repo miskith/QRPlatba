@@ -10,7 +10,7 @@
  */
 
 use PHPUnit\Framework\TestCase;
-use Miskith\QRInvoice\QRInvoice;
+use miskith\QRInvoice\QRInvoice;
 
 /**
  * Class QRPlatbaTest.

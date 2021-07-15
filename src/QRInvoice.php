@@ -9,7 +9,7 @@
  * please view LICENSE.
  */
 
-namespace Miskith\QRInvoice;
+namespace miskith\QRInvoice;
 
 use Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelMedium as QrErrorCorrectionLevelMedium;
 use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeEnlarge as QrRoundBlockSizeModeEnlarge;
