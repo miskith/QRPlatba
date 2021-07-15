@@ -345,6 +345,39 @@ class QRInvoice
 	}
 
 	/**
+	 * Nastavení ID faktury
+	 *
+	 * @param $id
+	 *
+	 * @return $this
+	 * @throws \InvalidArgumentException
+	 */
+	public function setInvoiceId($id)
+	{
+		if (mb_strlen($id) > 40) {
+			throw new QRInvoiceException('Invoice id is longer than 40 characters');
+		}
+
+		$this->sid_keys['ID'] = $id;
+
+		return $this;
+	}
+
+	/**
+	 * Nastavení data vydání faktury
+	 *
+	 * @param \DateTime $date
+	 *
+	 * @return $this
+	 */
+	public function setInvoiceDate(\DateTime $date)
+	{
+		$this->sid_keys['DD'] = $date->format('Ymd');
+
+		return $this;
+	}
+
+	/**
 	 * Metoda vrátí QR Platbu jako textový řetězec.
 	 *
 	 * @return string
