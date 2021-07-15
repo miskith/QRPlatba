@@ -89,6 +89,7 @@ require __DIR__ . '/vendor/autoload.php';
 use miskith\QRInvoice\QRInvoice;
 
 $qrInvoice = (new QRInvoice)
+    ->setIsOnlyInvoice(true)
     ->setIban('CZ9701000000007098760287+KOMBCZPP')
     ->setAmount(61189.00)
     ->setVariableSymbol('3310001054')
