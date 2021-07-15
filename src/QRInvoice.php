@@ -32,7 +32,12 @@ class QRInvoice
 	/**
 	 * Verze QR formátu QR Platby.
 	 */
-	public const VERSION = '1.0';
+	public const SPD_VERSION = '1.0';
+
+	/**
+	 * Verze QR formátu QR Faktury.
+	 */
+	public const SID_VERSION = '1.0';
 
 	/**
 	 * @var array
@@ -58,9 +63,9 @@ class QRInvoice
 	];
 
 	/**
-	 * @var array
+	 * @var array klíče QR Platby
 	 */
-	private $keys = [
+	private $spd_keys = [
 		'ACC' => null,
 		// Max. 46 - znaků IBAN, BIC Identifikace protistrany !povinny
 		'ALT-ACC' => null,
@@ -97,6 +102,72 @@ class QRInvoice
 		// Max. 20 znaků. - Identifikátor platby na straně příkazce. Jedná se o interní ID, jehož použití a interpretace závisí na bance příkazce.
 		'X-URL' => null,
 		// Max. 140 znaků. - URL, které je možno využít pro vlastní potřebu
+	];
+
+	/**
+	 * @var array klíče QR Faktury
+	 */
+	private $sid_keys = [
+		'ID' => null,
+		// Max. 40 znaků - Jednoznačné označení dokladu
+		'DD' => null,
+		// Právě 8 znaků - Datum vystavení dokladu ve formátu YYYYMMDD
+		'AM' => null,
+		// Max. 18 znaků - Výše celkové částky k úhradě v měně specifikované klíčem CC
+		'TP' => null,
+		// Právě 1 znak - Identifikace typu daňového plnění
+		'TD' => null,
+		// Právě 1 znak - Identifikace typu dokladu
+		'SA' => null,
+		// Právě 1 znak - Příznak, který rozlišuje, zda faktura obsahuje zúčtování záloh
+		'MSG' => null,
+		// Max. 40 znaků - Textový popis předmětu fakturace
+		'ON' => null,
+		// Max. 20 znaků - Číslo (označení) objednávky, k níž se vztahuje tento účetní doklad
+		'VS' => null,
+		// Max. 10 znaků - Variabilní symbol
+		'VII' => null,
+		// Max. 14 znaků - DIČ výstavce
+		'INI' => null,
+		// Max. 8 znaků - IČO výstavce
+		'VIR' => null,
+		// Max. 14 znaků - DIČ příjemce
+		'INR' => null,
+		// Max. 8 znaků - IČO příjemce
+		'DUZP' => null,
+		// Právě 8 znaků - Datum uskutečnění zdanitelného plnění ve formátu YYYYMMDD
+		'DPPD' => null,
+		// Právě 8 znaků - Datum povinnosti přiznat daň ve formátu YYYYMMDD
+		'DT' => null,
+		// Právě 8 znaků - Datum splatnosti celkové částky ve formátu YYYYMMDD
+		'TB0' => null,
+		// Max. 18 znaků - Částka základu daně v základní daňové sazbě v CZK včetně haléřového vyrovnání
+		'T0' => null,
+		// Max. 18 znaků - Částka daně v základní daňové sazbě v CZK včetně haléřového vyrovnání
+		'TB1' => null,
+		// Max. 18 znaků - Částka základu daně v první snížené daňové sazbě v CZK včetně haléřového vyrovnání
+		'T1' => null,
+		// Max. 18 znaků - Částka daně v první snížené daňové sazbě v CZK včetně haléřového vyrovnání
+		'TB2' => null,
+		// Max. 18 znaků - Částka základu daně ve druhé snížené daňové sazbě v CZK včetně haléřového vyrovnání
+		'T2' => null,
+		// Max. 18 znaků - Částka daně ve druhé snížené daňové sazbě v CZK včetně haléřového vyrovnání
+		'NTB' => null,
+		// Max. 18 znaků - Částka osvobozených plnění, plnění mimo předmět DPH, plnění neplátců DPH v CZK včetně haléřového vyrovnání. V případě kladné hodnoty bez znaménka, záporná hodnota se znaménkem. Znaménko vždy explicitně určuje směr toku peněz bez ohledu na jiné atributy
+		'CC' => 'CZK',
+		// Právě 3 znaky - Měna celkové částky. Není-li klíč v řetězci přítomen = měna je CZK
+		'FX' => null,
+		// Max. 18 znaků - Směnný kurz mezi CZK a měnou celkové částky
+		'FXA' => null,
+		// Max. 5 znaků - Počet jednotek cizí měny pro přepočet pomocí klíče FX. Není-li v řetězci klíč přítomen = 1
+		'ACC' => null,
+		// Max. 46 - Identifikace čísla účtu výstavce faktury, která je složena ze dvou komponent oddělených znaménkem + Tyto komponenty jsou: číslo účtu ve formátu IBAN identifikace banky ve formátu SWIFT dle ISO 9362. Druhá komponenta (SWIFT) je přitom volitelná
+		'CRC32' => null,
+		// Právě 8 znaků - Kontrolní součet. Hodnota vznikne výpočtem CRC32 celého řetězce (bez klíče CRC32) a převedením této číselné hodnoty do hexadecimálního zápisu.
+		'X-SW' => null,
+		// Max. 30 - Označení účetního software, ve kterém byl řetězec QR Faktury (faktura) vytvořen. Libovolný řetězec dle rozhodnutí výrobce účetního software. Označení by mělo být obecně unikátní a neměnné pro daný software (nebo jeho verzi).
+		'X-URL' => null,
+		// Max. 70 - Údaje pro získání účetních údajů (případně faktury) ve strukturovaném formátu z on-line uložiště.
 	];
 
 	/**
@@ -148,7 +219,7 @@ class QRInvoice
 	 */
 	public function setAccount($account)
 	{
-		$this->keys['ACC'] = self::accountToIban($account);
+		$this->spd_keys['ACC'] = $this->sid_keys['ACC'] = self::accountToIban($account);
 
 		return $this;
 	}
@@ -162,7 +233,7 @@ class QRInvoice
 	 */
 	public function setAmount($amount)
 	{
-		$this->keys['AM'] = sprintf('%.2f', $amount);
+		$this->spd_keys['AM'] = $this->sid_keys['AM'] = sprintf('%.2f', $amount);
 
 		return $this;
 	}
@@ -176,7 +247,7 @@ class QRInvoice
 	 */
 	public function setVariableSymbol($vs)
 	{
-		$this->keys['X-VS'] = $vs;
+		$this->spd_keys['X-VS'] = $this->sid_keys['VS'] = $vs;
 
 		return $this;
 	}
@@ -190,7 +261,7 @@ class QRInvoice
 	 */
 	public function setConstantSymbol($ks)
 	{
-		$this->keys['X-KS'] = $ks;
+		$this->spd_keys['X-KS'] = $ks;
 
 		return $this;
 	}
@@ -209,7 +280,7 @@ class QRInvoice
 		if (mb_strlen($ss) > 10) {
 			throw new QRInvoiceException('Specific symbol is higher than 10 chars');
 		}
-		$this->keys['X-SS'] = $ss;
+		$this->spd_keys['X-SS'] = $ss;
 
 		return $this;
 	}
@@ -223,7 +294,7 @@ class QRInvoice
 	 */
 	public function setMessage($msg)
 	{
-		$this->keys['MSG'] = mb_substr($this->stripDiacritics($msg), 0, 60);
+		$this->spd_keys['MSG'] = $this->sid_keys['MSG'] = mb_substr($this->stripDiacritics($msg), 0, 60);
 
 		return $this;
 	}
@@ -237,7 +308,7 @@ class QRInvoice
 	 */
 	public function setRecipientName($name)
 	{
-		$this->keys['RN'] = mb_substr($this->stripDiacritics($name), 0, 35);
+		$this->spd_keys['RN'] = mb_substr($this->stripDiacritics($name), 0, 35);
 
 		return $this;
 	}
@@ -251,7 +322,7 @@ class QRInvoice
 	 */
 	public function setDueDate(\DateTime $date)
 	{
-		$this->keys['DT'] = $date->format('Ymd');
+		$this->spd_keys['DT'] = $this->sid_keys['DT'] = $date->format('Ymd');
 
 		return $this;
 	}
@@ -268,7 +339,7 @@ class QRInvoice
 			throw new \InvalidArgumentException(sprintf('Currency %s is not supported.', $cc));
 		}
 
-		$this->keys['CC'] = $cc;
+		$this->spd_keys['CC'] = $this->sid_keys['CC'] = $cc;
 
 		return $this;
 	}
@@ -280,8 +351,8 @@ class QRInvoice
 	 */
 	public function __toString()
 	{
-		$chunks = ['SPD', self::VERSION];
-		foreach ($this->keys as $key => $value) {
+		$chunks = ['SPD', self::SPD_VERSION];
+		foreach ($this->spd_keys as $key => $value) {
 			if (null === $value) {
 				continue;
 			}
