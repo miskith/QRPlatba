@@ -87,7 +87,7 @@ class QRInvoiceTest extends TestCase
 
 	public function testSecondFromDocumentation()
 	{
-		$string = (new QRInvoice)
+		$string = (new QRInvoice())
 			->setIban('CZ9701000000007098760287+KOMBCZPP')
 			->setAmount(61189.00)
 			->setVariableSymbol('3310001054')
@@ -118,7 +118,7 @@ class QRInvoiceTest extends TestCase
 
 	public function testSecondFromDocumentationOnlyInvoice()
 	{
-		$string = (new QRInvoice)
+		$string = (new QRInvoice())
 			->setIban('CZ9701000000007098760287+KOMBCZPP')
 			->setAmount(61189.00)
 			->setVariableSymbol('3310001054')

@@ -811,7 +811,7 @@ class QRInvoice
 		if (false === mb_strpos($accountNumber[0], '-')) {
 			$acc = $accountNumber[0];
 		} else {
-			list($pre, $acc) = explode('-', $accountNumber[0]);
+			[$pre, $acc] = explode('-', $accountNumber[0]);
 		}
 
 		$accountPart = sprintf('%06d%010s', $pre, $acc);
@@ -849,14 +849,14 @@ class QRInvoice
 				'ó', 'ť', 'ď', 'ľ', 'ň', 'ŕ', 'â', 'ă', 'ä', 'ĺ', 'ć',
 				'ç', 'ę', 'ë', 'î', 'ń', 'ô', 'ő', 'ö', 'ů', 'ű', 'ü',
 				'Ě', 'Š', 'Č', 'Ř', 'Ž', 'Ý', 'Á', 'Í', 'É', 'Ú', 'Ů',
-				'Ó', 'Ť', 'Ď', 'Ľ', 'Ň', 'Ä', 'Ć', 'Ë', 'Ö', 'Ü'
+				'Ó', 'Ť', 'Ď', 'Ľ', 'Ň', 'Ä', 'Ć', 'Ë', 'Ö', 'Ü',
 			],
 			[
 				'e', 's', 'c', 'r', 'z', 'y', 'a', 'i', 'e', 'u', 'u',
 				'o', 't', 'd', 'l', 'n', 'a', 'a', 'a', 'a', 'a', 'a',
 				'c', 'e', 'e', 'i', 'n', 'o', 'o', 'o', 'u', 'u', 'u',
 				'E', 'S', 'C', 'R', 'Z', 'Y', 'A', 'I', 'E', 'U', 'U',
-				'O', 'T', 'D', 'L', 'N', 'A', 'C', 'E', 'O', 'U'
+				'O', 'T', 'D', 'L', 'N', 'A', 'C', 'E', 'O', 'U',
 			],
 			$string
 		);

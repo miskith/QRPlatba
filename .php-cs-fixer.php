@@ -9,10 +9,13 @@ $finder = Symfony\Component\Finder\Finder::create()
 return (new PhpCsFixer\Config)
 	->setRules([
 		'@PSR12' => true,
+		'@PHP81Migration' => true,
 		'array_syntax' => ['syntax' => 'short'],
-		'ordered_imports' => ['sortAlgorithm' => 'alpha'],
 		'no_unused_imports' => true,
 		'trim_array_spaces' => true,
+		'single_quote' => true,
+		'array_indentation' => true,
+		'no_extra_blank_lines' => true,
 		'ordered_imports' => [
 			'sort_algorithm' => 'none',
 		],
