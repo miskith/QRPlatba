@@ -753,22 +753,22 @@ class QRInvoice
 		switch ($format) {
 			case 'png':
 				$writer = new QrPngWriter();
-			break;
+				break;
 			case 'svg':
 				$writer = new QrSvgWriter();
-			break;
+				break;
 			case 'pdf':
 				$writer = new QrPdfWriter();
-			break;
+				break;
 			case 'eps':
 				$writer = new QrEpsWriter();
-			break;
+				break;
 			case 'bin':
 				$writer = new QrBinaryWriter();
-			break;
+				break;
 			default:
 				throw new QRInvoiceException('Unknown file format');
-			break;
+				break;
 		}
 
 		$writer->write($qrCode)->saveToFile($filename);
