@@ -11,8 +11,8 @@
 
 namespace miskith\QRInvoice;
 
-use Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelMedium as QrErrorCorrectionLevelMedium;
-use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeEnlarge as QrRoundBlockSizeModeEnlarge;
+use Endroid\QrCode\ErrorCorrectionLevel as QrErrorCorrectionLevel;
+use Endroid\QrCode\RoundBlockSizeMode as QrRoundBlockSizeMode;
 use Endroid\QrCode\Writer\BinaryWriter as QrBinaryWriter;
 use Endroid\QrCode\Encoding\Encoding as QrEncoding;
 use Endroid\QrCode\Writer\PngWriter as QrPngWriter;
@@ -788,9 +788,9 @@ class QRInvoice
 		return QrCode::create((string) $this)
 			->setSize($size - ($margin * 2))
 			->setEncoding(new QrEncoding('UTF-8'))
-			->setErrorCorrectionLevel(new QrErrorCorrectionLevelMedium())
+			->setErrorCorrectionLevel(QrErrorCorrectionLevel::Medium)
 			->setMargin($margin)
-			->setRoundBlockSizeMode(new QrRoundBlockSizeModeEnlarge())
+			->setRoundBlockSizeMode(QrRoundBlockSizeMode::Enlarge)
 			->setForegroundColor(new QrColor(0, 0, 0, 0))
 			->setBackgroundColor(new QrColor(255, 255, 255, 0));
 	}
