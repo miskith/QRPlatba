@@ -252,7 +252,7 @@ class QRInvoice
 	 */
 	public function setAmount($amount)
 	{
-		$this->spd_keys['AM'] = $this->sid_keys['AM'] = sprintf('%.2f', $amount);
+		$this->spd_keys['AM'] = $this->sid_keys['AM'] = sprintf('%.2F', $amount);
 
 		return $this;
 	}
